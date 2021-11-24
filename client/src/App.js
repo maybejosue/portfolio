@@ -1,7 +1,12 @@
-import { createTheme, ThemeProvider, Paper } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material";
 import { Home } from "./components";
 
 const theme = createTheme({
+  breakpoints: {
+    values: {
+      md: 700,
+    },
+  },
   palette: {
     primary: {
       main: "#061834",
@@ -18,9 +23,7 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Paper>
-        <Home />
-      </Paper>
+      <Home />
     </ThemeProvider>
   );
 }
