@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) =>
     },
     specialBtn: {
       backgroundColor: `${theme.palette.secondary.main} !important`,
+      color: "#E6E5E8 !important",
     },
   })
 );

@@ -1,7 +1,7 @@
 import { createTheme, ThemeProvider } from "@mui/material";
 import { Home } from "./components";
 
-const theme = createTheme({
+const lightTheme = createTheme({
   breakpoints: {
     values: {
       md: 700,
@@ -20,6 +20,28 @@ const theme = createTheme({
   },
 });
 
+const darkTheme = createTheme({
+  breakpoints: {
+    values: {
+      md: 700,
+    },
+  },
+  palette: {
+    mode: "dark",
+    primary: {
+      main: "#E6E5E8",
+    },
+    secondary: {
+      main: "#0046FF",
+    },
+    background: {
+      paper: "#1E293D",
+      default: "#141221",
+    },
+  },
+});
+
+let theme = lightTheme;
 function App() {
   return (
     <ThemeProvider theme={theme}>

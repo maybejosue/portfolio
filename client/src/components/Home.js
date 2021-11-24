@@ -1,10 +1,11 @@
 import React from "react";
-import NavigationBar from "./navigationBar/NavigationBar";
+import Navbar from "./navbar/Navbar.js";
 
 export default function Home() {
   return (
     <React.Fragment>
-      <NavigationBar />
+      <Navbar />
+      Home content
     </React.Fragment>
   );
 }
