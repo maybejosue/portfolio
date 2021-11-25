@@ -1,1 +1,2 @@
-export { default } from "./Tabs.js";
+export { tabs } from "./Tabs.js";
+export { greeting } from "./Greeting.js";
