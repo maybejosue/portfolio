@@ -53,7 +53,7 @@ const darkTheme = createTheme({
   },
 });
 
-let theme = darkTheme;
+let theme = lightTheme;
 function App() {
   return (
     <ThemeProvider theme={theme}>

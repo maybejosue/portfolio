@@ -80,51 +80,53 @@ export default function Navbar({ theme }) {
   }, [isMenuOpen, innerWidth]);
 
   return (
-    <Paper square>
-      <Box className={classes.content}>
-        <Logo />
     <nav>
+      <Paper square>
+        <Box className={classes.content}>
+          <Logo />
 
-        {/* Desktop tabs */}
-        <Box className={classes.desktop}>
-          {tabs.map(({ name, link }, i, arr) =>
-            i === arr.length - 1 ? (
-              <Button
-                variant="contained"
-                key={i}
-                className={`${classes.tab} ${classes.formatText} ${classes.specialBtn}`}
-                href={link}
-              >
-                {name}
-              </Button>
-            ) : (
-              <Button
-                className={`${classes.tab} ${classes.formatText}`}
-                key={i}
-                href={link}
-              >
-                {name}
-              </Button>
-            )
-          )}
-        </Box>
+          {/* Desktop tabs */}
+          <Box className={classes.desktop}>
+            {tabs.map(({ name, link }, i, arr) =>
+              i === arr.length - 1 ? (
+                <Button
+                  variant="contained"
+                  key={i}
+                  className={`${classes.tab} ${classes.formatText} ${classes.specialBtn}`}
+                  href={link}
+                >
+                  {name}
+                </Button>
+              ) : (
+                <Button
+                  className={`${classes.tab} ${classes.formatText}`}
+                  key={i}
+                  href={link}
+                >
+                  {name}
+                </Button>
+              )
+            )}
+          </Box>
 
-        {/* Mobile tabs */}
-        <Box className={classes.mobile}>
-          <IconButton onClick={() => setIsMenuOpen((prevState) => !prevState)}>
-            <MenuIcon />
-          </IconButton>
-          <Drawer
-            anchor="right"
-            variant="temporary"
-            open={isMenuOpen}
-            onClose={() => setIsMenuOpen(false)}
-          >
-            <Menu />
-          </Drawer>
+          {/* Mobile tabs */}
+          <Box className={classes.mobile}>
+            <IconButton
+              onClick={() => setIsMenuOpen((prevState) => !prevState)}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Drawer
+              anchor="right"
+              variant="temporary"
+              open={isMenuOpen}
+              onClose={() => setIsMenuOpen(false)}
+            >
+              <Menu />
+            </Drawer>
+          </Box>
         </Box>
-      </Box>
-    </Paper>
+      </Paper>
     </nav>
   );
 }
