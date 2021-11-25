@@ -18,7 +18,7 @@ const useStyles = makeStyles(() =>
 export default function Logo() {
   const classes = useStyles();
   return (
-    <Typography variant="subtitle1" className={classes.logo}>
+    <Typography color="primary" variant="subtitle1" className={classes.logo}>
       <Box component="span" className={classes.firstName}>
         Josue
       </Box>

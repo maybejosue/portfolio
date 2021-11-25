@@ -3,7 +3,7 @@ import { Box, Button } from "@mui/material";
 import { makeStyles, createStyles } from "@mui/styles";
 
 // Content
-import tabs from "../../content";
+import { tabs } from "../../content";
 
 const useStyles = makeStyles((theme) =>
   createStyles({

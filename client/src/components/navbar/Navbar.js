@@ -6,7 +6,7 @@ import Menu from "./Menu.js";
 import MenuIcon from "@mui/icons-material/Menu";
 
 // Content
-import tabs from "../../content";
+import { tabs } from "../../content";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -83,6 +83,7 @@ export default function Navbar({ theme }) {
     <Paper square>
       <Box className={classes.content}>
         <Logo />
+    <nav>
 
         {/* Desktop tabs */}
         <Box className={classes.desktop}>
@@ -124,5 +125,6 @@ export default function Navbar({ theme }) {
         </Box>
       </Box>
     </Paper>
+    </nav>
   );
 }
