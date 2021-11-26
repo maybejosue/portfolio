@@ -12,8 +12,11 @@ const useStyles = makeStyles((theme) =>
       minWidth: theme.breakpoints.values["sm"],
     },
     contentContainer: {
-      display: "grid",
+      display: "flex",
       justifyContent: "center",
+    },
+    content: {
+      maxWidth: "850px",
     },
   })
 );
@@ -24,7 +27,9 @@ export default function Home({ theme }) {
     <Box className={classes.appBackground}>
       <Navbar />
       <Box className={classes.contentContainer}>
-        <Greeting />
+        <Box className={classes.content}>
+          <Greeting />
+        </Box>
       </Box>
     </Box>
   );
