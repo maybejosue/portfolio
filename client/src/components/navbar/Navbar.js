@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Box, Paper, IconButton, Drawer, Button } from "@mui/material";
+import { Box, Paper, Button } from "@mui/material";
 import { makeStyles, createStyles } from "@mui/styles";
 import Logo from "./Logo.js";
 import Menu from "./Menu.js";
-import MenuIcon from "@mui/icons-material/Menu";
 
 // Content
-import tabs from "../../content";
+import { tabs } from "../../content";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -55,7 +54,6 @@ function debounce(fn, delay) {
 
 export default function Navbar({ theme }) {
   const classes = useStyles(theme);
-
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -74,55 +72,47 @@ export default function Navbar({ theme }) {
   });
 
   useEffect(() => {
-    if (isMenuOpen && innerWidth > 700) {
+    if (isMenuOpen && innerWidth > 800) {
       setIsMenuOpen(false);
     }
   }, [isMenuOpen, innerWidth]);
 
   return (
-    <Paper square>
-      <Box className={classes.content}>
-        <Logo />
+    <nav>
+      <Paper square>
+        <Box className={classes.content}>
+          <Logo />
 
-        {/* Desktop tabs */}
-        <Box className={classes.desktop}>
-          {tabs.map(({ name, link }, i, arr) =>
-            i === arr.length - 1 ? (
-              <Button
-                variant="contained"
-                key={i}
-                className={`${classes.tab} ${classes.formatText} ${classes.specialBtn}`}
-                href={link}
-              >
-                {name}
-              </Button>
-            ) : (
-              <Button
-                className={`${classes.tab} ${classes.formatText}`}
-                key={i}
-                href={link}
-              >
-                {name}
-              </Button>
-            )
-          )}
-        </Box>
+          {/* Desktop tabs */}
+          <Box className={classes.desktop}>
+            {tabs.map(({ name, link }, i, arr) =>
+              i === arr.length - 1 ? (
+                <Button
+                  variant="contained"
+                  key={i}
+                  className={`${classes.tab} ${classes.formatText} ${classes.specialBtn}`}
+                  href={link}
+                >
+                  {name}
+                </Button>
+              ) : (
+                <Button
+                  className={`${classes.tab} ${classes.formatText}`}
+                  key={i}
+                  href={link}
+                >
+                  {name}
+                </Button>
+              )
+            )}
+          </Box>
 
-        {/* Mobile tabs */}
-        <Box className={classes.mobile}>
-          <IconButton onClick={() => setIsMenuOpen((prevState) => !prevState)}>
-            <MenuIcon />
-          </IconButton>
-          <Drawer
-            anchor="right"
-            variant="temporary"
-            open={isMenuOpen}
-            onClose={() => setIsMenuOpen(false)}
-          >
-            <Menu />
-          </Drawer>
+          {/* Mobile tabs */}
+          <Box className={classes.mobile}>
+            <Menu setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
+          </Box>
         </Box>
-      </Box>
-    </Paper>
+      </Paper>
+    </nav>
   );
 }

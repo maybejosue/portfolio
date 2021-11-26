@@ -1,11 +1,36 @@
 import React from "react";
 import Navbar from "./navbar/Navbar.js";
+import Greeting from "./greeting/Greeting.js";
+import { Box } from "@mui/material";
+import { makeStyles, createStyles } from "@mui/styles";
 
-export default function Home() {
+const useStyles = makeStyles((theme) =>
+  createStyles({
+    appBackground: {
+      backgroundColor: theme.palette.background.default,
+      height: "100vh",
+      minWidth: theme.breakpoints.values["sm"],
+    },
+    contentContainer: {
+      display: "flex",
+      justifyContent: "center",
+    },
+    content: {
+      maxWidth: "850px",
+    },
+  })
+);
+
+export default function Home({ theme }) {
+  const classes = useStyles(theme);
   return (
-    <React.Fragment>
+    <Box className={classes.appBackground}>
       <Navbar />
-      Home content
-    </React.Fragment>
+      <Box className={classes.contentContainer}>
+        <Box className={classes.content}>
+          <Greeting />
+        </Box>
+      </Box>
+    </Box>
   );
 }
