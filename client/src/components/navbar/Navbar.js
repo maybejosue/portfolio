@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Box, Paper, IconButton, Drawer, Button } from "@mui/material";
+import { Box, Paper, Button } from "@mui/material";
 import { makeStyles, createStyles } from "@mui/styles";
 import Logo from "./Logo.js";
 import Menu from "./Menu.js";
-import MenuIcon from "@mui/icons-material/Menu";
 
 // Content
 import { tabs } from "../../content";
@@ -55,7 +54,6 @@ function debounce(fn, delay) {
 
 export default function Navbar({ theme }) {
   const classes = useStyles(theme);
-
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -74,7 +72,7 @@ export default function Navbar({ theme }) {
   });
 
   useEffect(() => {
-    if (isMenuOpen && innerWidth > 700) {
+    if (isMenuOpen && innerWidth > 800) {
       setIsMenuOpen(false);
     }
   }, [isMenuOpen, innerWidth]);
@@ -111,19 +109,7 @@ export default function Navbar({ theme }) {
 
           {/* Mobile tabs */}
           <Box className={classes.mobile}>
-            <IconButton
-              onClick={() => setIsMenuOpen((prevState) => !prevState)}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Drawer
-              anchor="right"
-              variant="temporary"
-              open={isMenuOpen}
-              onClose={() => setIsMenuOpen(false)}
-            >
-              <Menu />
-            </Drawer>
+            <Menu setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
           </Box>
         </Box>
       </Paper>
