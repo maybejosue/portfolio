@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./navbar/Navbar.js";
 import Greeting from "./greeting/Greeting.js";
+import About from "./about/About.js";
 import { Box } from "@mui/material";
 import { makeStyles, createStyles } from "@mui/styles";
 
@@ -29,6 +30,7 @@ export default function Home({ theme }) {
       <Box className={classes.contentContainer}>
         <Box className={classes.content}>
           <Greeting />
+          <About />
         </Box>
       </Box>
     </Box>

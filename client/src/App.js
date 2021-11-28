@@ -4,10 +4,7 @@ import { Home } from "./components";
 const lightTheme = createTheme({
   breakpoints: {
     values: {
-      sm: 350,
       md: 800,
-      lg: 1200,
-      xl: 1500,
     },
   },
   palette: {
@@ -20,19 +17,13 @@ const lightTheme = createTheme({
     background: {
       default: "#F4F5FC",
     },
-    text: {
-      secondary: "#939393",
-    },
   },
 });
 
 const darkTheme = createTheme({
   breakpoints: {
     values: {
-      sm: 350,
       md: 800,
-      lg: 1200,
-      xl: 1500,
     },
   },
   palette: {
@@ -46,9 +37,6 @@ const darkTheme = createTheme({
     background: {
       paper: "#1E293D",
       default: "#141221",
-    },
-    text: {
-      secondary: "#707486",
     },
   },
 });

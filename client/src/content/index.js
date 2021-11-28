@@ -1,2 +1,3 @@
-export { tabs } from "./Tabs.js";
-export { greeting } from "./Greeting.js";
+export { tabs } from "./tabs.js";
+export { greeting } from "./greeting.js";
+export { userDetails } from "./userDetails.js";
