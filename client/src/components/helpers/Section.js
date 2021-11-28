@@ -6,6 +6,7 @@ const useStyles = makeStyles(() =>
   createStyles({
     container: {
       padding: "1rem",
+      marginBottom: "1rem",
     },
   })
 );
