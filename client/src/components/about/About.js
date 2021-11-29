@@ -70,55 +70,52 @@ export default function About({ theme }) {
   } = userDetails;
 
   return (
-    <section id="about">
-      <Section>
-        <Box className={classes.userContainer}>
-          <Paper elevation={8}>
-            <Avatar
-              variant="rounded"
-              src={avatar}
-              className={classes.avatar}
-              alt={name}
-            />
-          </Paper>
+    <Section sectionName="about">
+      <Box className={classes.userContainer}>
+        <Paper elevation={8}>
+          <Avatar
+            variant="rounded"
+            src={avatar}
+            className={classes.avatar}
+            alt={name}
+          />
+        </Paper>
 
-          <Box className={classes.userInfo}>
-            <Typography color="primary"> {name}</Typography>
-            <Typography className={classes.location}>
-              <LocationOnIcon className={classes.locationIcon} /> {city},{" "}
-              {state}
-            </Typography>
-          </Box>
-
-          <Chip label={profession} className={classes.chip} />
+        <Box className={classes.userInfo}>
+          <Typography color="primary"> {name}</Typography>
+          <Typography className={classes.location}>
+            <LocationOnIcon className={classes.locationIcon} /> {city}, {state}
+          </Typography>
         </Box>
-        {description}
-        <Box className={classes.contactContainer}>
-          <Box className={classes.socialMedia}>
-            {socials.map(({ icon, link }, i) => (
-              <Button
-                variant="contained"
-                className={classes.btn}
-                key={i}
-                target="_black"
-                href={link}
-              >
-                {icon}
-              </Button>
-            ))}
-          </Box>
 
-          <Button
-            variant="contained"
-            className={classes.btn}
-            startIcon={icon}
-            target="_black"
-            href={link}
-          >
-            {headline}
-          </Button>
+        <Chip label={profession} className={classes.chip} />
+      </Box>
+      {description}
+      <Box className={classes.contactContainer}>
+        <Box className={classes.socialMedia}>
+          {socials.map(({ icon, link }, i) => (
+            <Button
+              variant="contained"
+              className={classes.btn}
+              key={i}
+              target="_black"
+              href={link}
+            >
+              {icon}
+            </Button>
+          ))}
         </Box>
-      </Section>
-    </section>
+
+        <Button
+          variant="contained"
+          className={classes.btn}
+          startIcon={icon}
+          target="_black"
+          href={link}
+        >
+          {headline}
+        </Button>
+      </Box>
+    </Section>
   );
 }
