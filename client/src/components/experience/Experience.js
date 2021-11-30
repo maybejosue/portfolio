@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) =>
     tabs: {
       marginBottom: "2rem",
     },
+    tab: {
+      textTransform: "capitalize !important",
+    },
   })
 );
 
@@ -46,7 +49,7 @@ export default function Experience({ theme }) {
           orientation={matches ? "vertical" : "horizontal"}
         >
           {workHistory.map(({ companyName }, i) => (
-            <Tab label={companyName} key={i} />
+            <Tab label={companyName} key={i} className={classes.tab} />
           ))}
         </Tabs>
 
