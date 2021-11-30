@@ -11,11 +11,13 @@ const useStyles = makeStyles(() =>
   })
 );
 
-export default function Section({ children }) {
+export default function Section({ children, sectionName }) {
   const classes = useStyles();
   return (
-    <Paper elevation={0} className={classes.container}>
-      {children}
-    </Paper>
+    <section id={sectionName}>
+      <Paper elevation={0} className={classes.container}>
+        {children}
+      </Paper>
+    </section>
   );
 }
