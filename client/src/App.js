@@ -18,6 +18,17 @@ const lightTheme = createTheme({
       default: "#F4F5FC",
     },
   },
+  components: {
+    MuiTimelineItem: {
+      styleOverrides: {
+        root: {
+          ":before": {
+            content: "none",
+          },
+        },
+      },
+    },
+  },
 });
 
 const darkTheme = createTheme({
@@ -37,6 +48,17 @@ const darkTheme = createTheme({
     background: {
       paper: "#1E293D",
       default: "#141221",
+    },
+  },
+  components: {
+    MuiTimelineItem: {
+      styleOverrides: {
+        root: {
+          ":before": {
+            content: "none",
+          },
+        },
+      },
     },
   },
 });
