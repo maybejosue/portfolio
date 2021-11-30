@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) =>
 export default function Experience({ theme }) {
   const classes = useStyles(theme);
   const [value, setValue] = useState(0);
-  const matches = useMediaQuery((theme) => theme.breakpoints.up("md"));
+  const matches = useMediaQuery((theme) => theme.breakpoints.down("md"));
 
   return (
     <Section sectionName="experience">
@@ -41,12 +41,12 @@ export default function Experience({ theme }) {
           className={classes.tabs}
           value={value}
           onChange={(e, v) => setValue(v)}
-          variant={matches ? "auto" : "scrollable"}
+          variant={matches ? "scrollable" : "auto"}
           indicatorColor="secondary"
           scrollButtons
           allowScrollButtonsMobile
           aria-label="work history tabs"
-          orientation={matches ? "vertical" : "horizontal"}
+          orientation={matches ? "horizontal" : "vertical"}
         >
           {workHistory.map(({ companyName }, i) => (
             <Tab label={companyName} key={i} className={classes.tab} />
