@@ -3,8 +3,10 @@ import Navbar from "./navbar/Navbar.js";
 import Greeting from "./greeting/Greeting.js";
 import About from "./about/About.js";
 import Experience from "./experience/Experience.js";
-import { Box } from "@mui/material";
+import { Box, Fab } from "@mui/material";
 import { makeStyles, createStyles } from "@mui/styles";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -17,11 +19,28 @@ const useStyles = makeStyles((theme) =>
       margin: "0 auto",
       maxWidth: "850px",
     },
+    fab: {
+      position: "fixed !important",
+      bottom: 25,
+      right: 25,
+    },
   })
 );
 
-export default function Home({ theme }) {
+export default function Home({ theme, mode, setMode }) {
   const classes = useStyles(theme);
+
+  const updateMode = () => {
+    setMode((prevMode) => {
+      if (prevMode === "dark") {
+        localStorage.removeItem("mode");
+        return "light";
+      }
+      localStorage.setItem("mode", "dark");
+      return "dark";
+    });
+  };
+
   return (
     <Box className={classes.appBackground}>
       <Navbar />
@@ -30,6 +49,10 @@ export default function Home({ theme }) {
         <About />
         <Experience />
       </Box>
+
+      <Fab size="medium" className={classes.fab} onClick={updateMode}>
+        {mode === "dark" ? <DarkModeIcon /> : <LightModeIcon />}
+      </Fab>
     </Box>
   );
 }
