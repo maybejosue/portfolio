@@ -41,7 +41,7 @@ export default function Experience({ theme }) {
           className={classes.tabs}
           value={value}
           onChange={(e, v) => setValue(v)}
-          variant={matches ? "scrollable" : "auto"}
+          variant={matches ? "scrollable" : "standard"}
           indicatorColor="secondary"
           scrollButtons
           allowScrollButtonsMobile
