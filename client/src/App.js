@@ -5,6 +5,7 @@ import { Home } from "./components";
 const getDesignTokens = (mode) => ({
   breakpoints: {
     values: {
+      sm: 600,
       md: 800,
     },
   },
