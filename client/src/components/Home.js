@@ -7,12 +7,12 @@ import { Box, Fab } from "@mui/material";
 import { makeStyles, createStyles } from "@mui/styles";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import Projects from "./projects/Projects.js";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
     appBackground: {
       backgroundColor: theme.palette.background.default,
-      minWidth: theme.breakpoints.values["sm"],
       paddingBottom: "8rem",
     },
     content: {
@@ -48,6 +48,7 @@ export default function Home({ theme, mode, setMode }) {
         <Greeting />
         <About />
         <Experience />
+        <Projects />
       </Box>
 
       <Fab size="medium" className={classes.fab} onClick={updateMode}>
