@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { Home } from "./components";
+import Resume from "./components/resume/Resume.js";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const getDesignTokens = (mode) => ({
   breakpoints: {
@@ -60,9 +62,14 @@ function App() {
   const theme = createTheme(getDesignTokens(mode), [mode]);
 
   return (
-    <ThemeProvider theme={theme}>
-      <Home mode={mode} setMode={setMode} />
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <Routes>
+          <Route path="/" element={<Home mode={mode} setMode={setMode} />} />
+          <Route path="resume" element={<Resume />} />
+        </Routes>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 
