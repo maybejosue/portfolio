@@ -11,6 +11,7 @@ export default function Resume() {
         height: "100%",
         position: "absolute",
         width: "100%",
+        scrolling: "auto",
       }}
     />
   );
