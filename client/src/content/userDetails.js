@@ -20,17 +20,6 @@ export const userDetails = {
       </Typography>
       <Typography paragraph>
         My professional career started when I dropped out of college to attend
-        Lambda School, a 9+ month computer science and software engineering
-        program that provides an immersive hands-on curriculum with a focus on
-        computer science, and full-stack web development.
-      </Typography>
-      <Typography paragraph>
-        As for myself, I really enjoy watching anime, reading manga, struggling
-        through leetcode challenges, and immersing myself in the sneaker-twitter
-        community (sneaker drops).
-      </Typography>
-      <Typography paragraph>
-        I recently left my Project Reviewing position at{" "}
         <Link
           href={"https://www.bloomtech.com/"}
           color="secondary"
@@ -41,10 +30,21 @@ export const userDetails = {
             formerly Lambda School
           </Box>
           )
-        </Link>{" "}
-        to focus on finding a team whose products and projects I'm passionate
-        about. My goal right now is to join an awesome engineering-team as a
-        full-time Software Engineer!
+        </Link>
+        ; a technical training program designed to teach full-stack web
+        development and computer science fundamentals.
+      </Typography>
+      <Typography paragraph>
+        After I graduated from Bloomtech, I worked as a Code Reviewer, where I
+        provided actionable feedback to student developers on their sprint
+        challenge submissions. While I enjoyed my time as a Code Reviewer, I
+        left the position to focus on finding a full-time Software Engineering
+        role whose products and projects I'm passionate about.
+      </Typography>
+      <Typography paragraph>
+        On a more personal note, I enjoy watching anime, reading manga,
+        struggling through Leetcode challenges, and immersing myself in the
+        sneaker-twitter community.
       </Typography>
     </Box>
   ),
