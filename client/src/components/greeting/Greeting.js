@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { makeStyles, createStyles } from "@mui/styles";
 import { greeting } from "../../content";
+import ParkIcon from "@mui/icons-material/Park";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -29,7 +30,7 @@ const useStyles = makeStyles((theme) =>
 
 export default function Greeting({ theme }) {
   const classes = useStyles(theme);
-  const { headline, name, status, oneliner } = greeting;
+  const { headline, name, status, oneliner, link } = greeting;
 
   return (
     <section id="greeting">
@@ -60,8 +61,14 @@ export default function Greeting({ theme }) {
         >
           {status}
         </Typography>
-        <Button variant="contained" className={classes.btn}>
-          More about me
+        <Button
+          variant="contained"
+          className={classes.btn}
+          startIcon={<ParkIcon />}
+          href={link}
+          target="_blank"
+        >
+          LinkTree
         </Button>
       </Box>
     </section>
