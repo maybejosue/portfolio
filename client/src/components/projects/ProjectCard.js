@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) =>
       maxHeight: 500,
       position: "relative",
       boxShadow: "none !important",
-
+      background: `${theme.palette.background.paper} !important`,
       [theme.breakpoints.down("md")]: {
         margin: "0 auto",
       },

@@ -3,15 +3,22 @@ import { Box, Paper, Button } from "@mui/material";
 import { makeStyles, createStyles } from "@mui/styles";
 import Logo from "./Logo.js";
 import Menu from "./Menu.js";
+import HideOnScroll from "../helpers/HideOnScroll.js";
 
 // Content
 import { tabs } from "../../content";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
+    navbarContainer: {
+      zIndex: theme.zIndex.appBar,
+      width: "100%",
+      position: "fixed",
+    },
     content: {
       padding: "0.75rem",
       display: "flex",
+      background: theme.palette.background.paper,
     },
     tabContainer: {
       padding: "3rem",
@@ -82,47 +89,49 @@ export default function Navbar({ theme }) {
   }, [isMenuOpen, innerWidth]);
 
   return (
-    <nav>
-      <Paper square>
-        <Box className={classes.content}>
-          <Logo />
+    <HideOnScroll>
+      <Box className={classes.navbarContainer}>
+        <nav>
+          <Box className={classes.content}>
+            <Logo />
 
-          {/* Desktop tabs */}
-          <Box className={classes.desktop}>
-            {tabs.map(({ name, link }, i, arr) =>
-              i === arr.length - 1 ? (
-                <Button
-                  variant="contained"
-                  key={i}
-                  className={`${classes.tab} ${classes.formatText} ${classes.specialBtn}`}
-                  href={link}
-                  rel="noopener noreferrer"
-                >
-                  {name}
-                </Button>
-              ) : (
-                <Button
-                  className={`${classes.tab} ${classes.formatText}`}
-                  key={i}
-                  href={link}
-                  rel="noopener noreferrer"
-                >
-                  {name}
-                </Button>
-              )
-            )}
-          </Box>
+            {/* Desktop tabs */}
+            <Box className={classes.desktop}>
+              {tabs.map(({ name, link }, i, arr) =>
+                i === arr.length - 1 ? (
+                  <Button
+                    variant="contained"
+                    key={i}
+                    className={`${classes.tab} ${classes.formatText} ${classes.specialBtn}`}
+                    href={link}
+                    rel="noopener noreferrer"
+                  >
+                    {name}
+                  </Button>
+                ) : (
+                  <Button
+                    className={`${classes.tab} ${classes.formatText}`}
+                    key={i}
+                    href={link}
+                    rel="noopener noreferrer"
+                  >
+                    {name}
+                  </Button>
+                )
+              )}
+            </Box>
 
-          {/* Mobile tabs */}
-          <Box className={classes.mobile}>
-            <Menu
-              setIsMenuOpen={setIsMenuOpen}
-              isMenuOpen={isMenuOpen}
-              closeMenu={closeMenu}
-            />
+            {/* Mobile tabs */}
+            <Box className={classes.mobile}>
+              <Menu
+                setIsMenuOpen={setIsMenuOpen}
+                isMenuOpen={isMenuOpen}
+                closeMenu={closeMenu}
+              />
+            </Box>
           </Box>
-        </Box>
-      </Paper>
-    </nav>
+        </nav>
+      </Box>
+    </HideOnScroll>
   );
 }
