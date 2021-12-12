@@ -51,7 +51,12 @@ export default function Home({ theme, mode, setMode }) {
         <Projects />
       </Box>
 
-      <Fab size="medium" className={classes.fab} onClick={updateMode}>
+      <Fab
+        size="medium"
+        className={classes.fab}
+        onClick={updateMode}
+        aria-label="theme-icon"
+      >
         {mode === "dark" ? <DarkModeIcon /> : <LightModeIcon />}
       </Fab>
     </Box>

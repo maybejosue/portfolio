@@ -42,7 +42,7 @@ export default function Greeting({ theme }) {
           color="primary"
           gutterBottom
           variant="h3"
-          component="h1"
+          component="h4"
           className={classes.name}
         >
           {name}
@@ -50,7 +50,7 @@ export default function Greeting({ theme }) {
         <Typography
           gutterBottom
           variant="h5"
-          component="h2"
+          component="h5"
           className={classes.secondaryText}
         >
           {oneliner}
@@ -67,6 +67,7 @@ export default function Greeting({ theme }) {
           startIcon={<ParkIcon />}
           href={link}
           target="_blank"
+          rel="noopener noreferrer"
         >
           LinkTree
         </Button>

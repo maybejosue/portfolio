@@ -7,7 +7,6 @@ import {
   Typography,
   Box,
   IconButton,
-  Button,
   Divider,
 } from "@mui/material";
 
@@ -91,7 +90,12 @@ export default function ProjectCard({ project, theme }) {
 
           <Box>
             {github && (
-              <IconButton href={github} target="_blank" aria-label="github">
+              <IconButton
+                href={github}
+                target="_blank"
+                aria-label="github icon"
+                rel="noopener noreferrer"
+              >
                 <GitHubIcon />
               </IconButton>
             )}
@@ -99,7 +103,8 @@ export default function ProjectCard({ project, theme }) {
               <IconButton
                 href={deployed}
                 target="_blank"
-                aria-label="live view"
+                aria-label={`deployed version of ${title}`}
+                rel="noopener noreferrer"
               >
                 <OpenInNewIcon />
               </IconButton>
