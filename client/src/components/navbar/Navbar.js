@@ -57,6 +57,10 @@ export default function Navbar({ theme }) {
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   useEffect(() => {
     const updateInnerWidth = () => {
       setInnerWidth(window.innerWidth);
@@ -73,7 +77,7 @@ export default function Navbar({ theme }) {
 
   useEffect(() => {
     if (isMenuOpen && innerWidth > 800) {
-      setIsMenuOpen(false);
+      closeMenu();
     }
   }, [isMenuOpen, innerWidth]);
 
@@ -92,6 +96,7 @@ export default function Navbar({ theme }) {
                   key={i}
                   className={`${classes.tab} ${classes.formatText} ${classes.specialBtn}`}
                   href={link}
+                  rel="noopener noreferrer"
                 >
                   {name}
                 </Button>
@@ -100,6 +105,7 @@ export default function Navbar({ theme }) {
                   className={`${classes.tab} ${classes.formatText}`}
                   key={i}
                   href={link}
+                  rel="noopener noreferrer"
                 >
                   {name}
                 </Button>
@@ -109,7 +115,11 @@ export default function Navbar({ theme }) {
 
           {/* Mobile tabs */}
           <Box className={classes.mobile}>
-            <Menu setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
+            <Menu
+              setIsMenuOpen={setIsMenuOpen}
+              isMenuOpen={isMenuOpen}
+              closeMenu={closeMenu}
+            />
           </Box>
         </Box>
       </Paper>

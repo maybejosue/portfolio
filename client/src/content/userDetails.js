@@ -19,11 +19,12 @@ export const userDetails = {
         Hey, I'm Josue Rodriguez, a software engineer based in Hemet, CA.
       </Typography>
       <Typography paragraph>
-        My professional career started when I dropped out of college to attend
+        My professional career started when I dropped out of college to attend{" "}
         <Link
           href={"https://www.bloomtech.com/"}
           color="secondary"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Bloomtech (
           <Box component="span" fontStyle="italic">
@@ -49,13 +50,26 @@ export const userDetails = {
     </Box>
   ),
   socials: [
-    { icon: <LinkedInIcon />, link: "https://www.linkedin.com/in/maybejosue/" },
-    { icon: <GitHubIcon />, link: "https://github.com/maybejosue" },
-    { icon: <StarIcon />, link: "https://leetcode.com/maybejosue/" },
+    {
+      icon: <LinkedInIcon />,
+      link: "https://www.linkedin.com/in/maybejosue/",
+      label: "Linkedin",
+    },
+    {
+      icon: <GitHubIcon />,
+      link: "https://github.com/maybejosue",
+      label: "Github",
+    },
+    {
+      icon: <StarIcon />,
+      link: "https://leetcode.com/maybejosue/",
+      label: "Leetcode",
+    },
   ],
   contact: {
     icon: <EmailIcon />,
     link: "mailto:maybejosue@gmail.com",
     headline: "Get in touch",
+    label: "Email",
   },
 };

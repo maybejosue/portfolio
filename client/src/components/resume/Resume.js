@@ -6,12 +6,12 @@ export default function Resume() {
     <iframe
       type="application/pdf"
       src={resume}
+      title="Resume"
       style={{
         border: 0,
         height: "100%",
         position: "absolute",
         width: "100%",
-        scrolling: "auto",
       }}
     />
   );

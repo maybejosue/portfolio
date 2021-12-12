@@ -74,7 +74,12 @@ export default function TabPanel({ workHistory, theme }) {
         )}
 
         {link && (
-          <IconButton size="small" href={link} target="_blank">
+          <IconButton
+            size="small"
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <OpenInNewIcon fontSize="small" />
           </IconButton>
         )}

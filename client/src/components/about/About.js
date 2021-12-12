@@ -66,7 +66,7 @@ export default function About({ theme }) {
     description,
     socials,
     avatar,
-    contact: { icon, link, headline },
+    contact: { icon, link, headline, label },
   } = userDetails;
 
   return (
@@ -93,13 +93,15 @@ export default function About({ theme }) {
       {description}
       <Box className={classes.contactContainer}>
         <Box className={classes.socialMedia}>
-          {socials.map(({ icon, link }, i) => (
+          {socials.map(({ icon, link, label }, i) => (
             <Button
               variant="contained"
               className={classes.btn}
               key={i}
               target="_black"
               href={link}
+              aria-label={label}
+              rel="noopener noreferrer"
             >
               {icon}
             </Button>
@@ -112,6 +114,8 @@ export default function About({ theme }) {
           startIcon={icon}
           target="_black"
           href={link}
+          aria-label={label}
+          rel="noopener noreferrer"
         >
           {headline}
         </Button>

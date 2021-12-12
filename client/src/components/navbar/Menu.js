@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) =>
   })
 );
 
-export default function Menu({ theme, setIsMenuOpen, isMenuOpen }) {
+export default function Menu({ theme, setIsMenuOpen, isMenuOpen, closeMenu }) {
   const classes = useStyles(theme);
   return (
     <React.Fragment>
@@ -37,7 +37,7 @@ export default function Menu({ theme, setIsMenuOpen, isMenuOpen }) {
         anchor="right"
         variant="temporary"
         open={isMenuOpen}
-        onClose={() => setIsMenuOpen(false)}
+        onClose={closeMenu}
       >
         <Box className={classes.tabContainer}>
           {tabs.map(({ name, link }, i, arr) =>
@@ -47,6 +47,8 @@ export default function Menu({ theme, setIsMenuOpen, isMenuOpen }) {
                 key={i}
                 className={`${classes.tab} ${classes.formatText} ${classes.specialBtn}`}
                 href={link}
+                onClick={closeMenu}
+                rel="noopener noreferrer"
               >
                 {name}
               </Button>
@@ -55,6 +57,8 @@ export default function Menu({ theme, setIsMenuOpen, isMenuOpen }) {
                 className={`${classes.tab} ${classes.formatText}`}
                 key={i}
                 href={link}
+                onClick={closeMenu}
+                rel="noopener noreferrer"
               >
                 {name}
               </Button>
