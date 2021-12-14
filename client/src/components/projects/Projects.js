@@ -45,7 +45,6 @@ export default function Projects() {
     infinite: true,
     speed: 500,
     slidesToShow: 2,
-    lazyLoad: "ondemand",
 
     responsive: [
       {

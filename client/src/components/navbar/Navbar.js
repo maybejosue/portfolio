@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Box, Paper, Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { makeStyles, createStyles } from "@mui/styles";
 import Logo from "./Logo.js";
 import Menu from "./Menu.js";
 import HideOnScroll from "../helpers/HideOnScroll.js";
+import { scroller } from "react-scroll";
 
 // Content
 import { tabs } from "../../content";
@@ -64,8 +65,18 @@ export default function Navbar({ theme }) {
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const closeMenu = () => {
+  const scrollTo = (section) => {
+    scroller.scrollTo(section, {
+      duration: 1000,
+      delay: 0,
+      smooth: true,
+      offset: -60,
+    });
+  };
+
+  const closeMenu = (section) => {
     setIsMenuOpen(false);
+    scrollTo(section);
   };
 
   useEffect(() => {
@@ -104,7 +115,6 @@ export default function Navbar({ theme }) {
                     key={i}
                     className={`${classes.tab} ${classes.formatText} ${classes.specialBtn}`}
                     href={link}
-                    rel="noopener noreferrer"
                   >
                     {name}
                   </Button>
@@ -112,8 +122,9 @@ export default function Navbar({ theme }) {
                   <Button
                     className={`${classes.tab} ${classes.formatText}`}
                     key={i}
-                    href={link}
-                    rel="noopener noreferrer"
+                    onClick={() => {
+                      scrollTo(link);
+                    }}
                   >
                     {name}
                   </Button>

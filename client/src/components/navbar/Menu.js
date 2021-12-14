@@ -56,9 +56,7 @@ export default function Menu({ theme, setIsMenuOpen, isMenuOpen, closeMenu }) {
               <Button
                 className={`${classes.tab} ${classes.formatText}`}
                 key={i}
-                href={link}
-                onClick={closeMenu}
-                rel="noopener noreferrer"
+                onClick={() => closeMenu(link)}
               >
                 {name}
               </Button>
