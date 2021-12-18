@@ -7,7 +7,7 @@ import ParkIcon from "@mui/icons-material/Park";
 const useStyles = makeStyles((theme) =>
   createStyles({
     greetingContainer: {
-      padding: "7rem 1rem ",
+      padding: "9rem 1rem ",
     },
     name: {
       fontWeight: `${600} !important`,
