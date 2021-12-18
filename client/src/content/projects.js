@@ -17,28 +17,27 @@ export const projects = [
     title: "Anime Archive",
     img: aa,
     description:
-      "A mobile, web-based, online database of information related to anime. Users can discover new anime or level up their love and fandom for their already favorite anime.",
+      "A mobile, web-based, online database of information related to anime.",
     github: "https://github.com/Anime-Archive/anime-archive-fe",
     deployed: "https://animearchive.netlify.app/",
-    tech: ["React", "AniList API", "GraphQL", "Netlify"],
+    tech: ["React", "AniList API", "GraphQL", "Figma"],
   },
   {
     title: "Weightlifting Journal",
     img: wlj,
-    description:
-      "Convenient app that tracks your progress in order to help individuals achieve and preserve a way of life and a mindset unique to the roots of muscle build and weight loss.",
+    description: "Web app to track muscle, fat, and weight loss progress.",
     github:
       "https://github.com/BW-FT-Weight-Lifting-Journal-12/ui-marketing-page",
     deployed: "https://weight-lifting-journal-12.netlify.app/index.html",
-    tech: ["HTML", "LESS/CSS", "Netlify"],
+    tech: ["HTML", "LESS/CSS"],
   },
   {
     title: "Silent Auction",
     img: sa,
     description:
-      "Web app allows users to own items at a desired price while supporting charity organizations",
+      "Online auction platform to create and manage charitable events.",
     github: "https://github.com/Web26-Silent-Auction-1/FE",
     deployed: "",
-    tech: ["React", "Redux", "Netlify"],
+    tech: ["React", "Redux"],
   },
 ];
