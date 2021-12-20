@@ -7,6 +7,19 @@ Compilation of materials that exemplifies skills, qualifications, education, tra
 # Packages
 [React-scroll](https://www.npmjs.com/package/react-scroll) | [React-slick](https://www.npmjs.com/package/react-slick)
 
+# Design
+[UI/UX Design Files](https://www.figma.com/file/GmaljsSK6QxdSEPWCUxeGY/Portfolio?node-id=0%3A1)
+   
+# Screenshots
+
+### Light
+
+![](/client/src/assests/light.png)
+
+### Dark
+
+![](client/src/assests/dark.png)
+
 # Installation
 1. Install dependencies
 
@@ -18,5 +31,4 @@ Compilation of materials that exemplifies skills, qualifications, education, tra
    ```
    npm start
    ```
-
 
