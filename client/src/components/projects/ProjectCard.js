@@ -27,25 +27,33 @@ const useStyles = makeStyles((theme) =>
       position: "relative",
       boxShadow: "none !important",
       background: `${theme.palette.background.paper} !important`,
-      [theme.breakpoints.down("md")]: {
-        margin: "0 auto",
+      margin: "0 auto",
+      [theme.breakpoints.up("md")]: {
+        width: "85%",
+        display: "flex",
+        background: "transparent !important",
       },
       [theme.breakpoints.down("sm")]: {
         width: 320,
       },
     },
-    imgContainer: {
-      overflow: "hidden",
-      height: 250,
-    },
     cardMedia: {
       height: 250,
       width: 370,
       objectPosition: "center top",
+      [theme.breakpoints.up("md")]: {
+        maxWidth: 300,
+        height: 400,
+      },
     },
-    headline: {
+    cardContent: {
+      [theme.breakpoints.up("md")]: {
+        margin: "auto",
+      },
+    },
+    links: {
       display: "flex",
-      marginBottom: "1.5rem",
+      marginBottom: "0.5rem",
     },
     title: {
       flex: 1,
@@ -53,14 +61,11 @@ const useStyles = makeStyles((theme) =>
       alignItems: "center",
     },
     desc: {
-      color: theme.palette.text.secondary,
       lineHeight: 1.5,
-    },
-    techStack: {
-      color: theme.palette.text.secondary,
     },
     techContainer: {
       marginTop: "1rem !important",
+      color: theme.palette.text.secondary,
       "& span": {
         marginRight: "1rem",
       },
@@ -73,43 +78,39 @@ export default function ProjectCard({ project, theme }) {
   const { title, img, description, github, deployed, tech } = project;
   return (
     <Card className={classes.card}>
-      <Box className={classes.imgContainer}>
-        <CardMedia
-          component="img"
-          image={img}
-          className={classes.cardMedia}
-          alt={`Live snapshot of ${title}`}
-        />
-      </Box>
+      <CardMedia
+        component="img"
+        image={img}
+        className={classes.cardMedia}
+        alt={`Live snapshot of ${title}`}
+      />
 
-      <CardContent>
-        <Box className={classes.headline}>
+      <CardContent className={classes.cardContent}>
+        <Box className={classes.links}>
           <Typography variant="subtitle1" className={classes.title}>
             {title}
           </Typography>
 
-          <Box>
-            {github && (
-              <IconButton
-                href={github}
-                target="_blank"
-                aria-label="github icon"
-                rel="noopener noreferrer"
-              >
-                <GitHubIcon />
-              </IconButton>
-            )}
-            {deployed && (
-              <IconButton
-                href={deployed}
-                target="_blank"
-                aria-label={`deployed version of ${title}`}
-                rel="noopener noreferrer"
-              >
-                <OpenInNewIcon />
-              </IconButton>
-            )}
-          </Box>
+          {github && (
+            <IconButton
+              href={github}
+              target="_blank"
+              aria-label="github icon"
+              rel="noopener noreferrer"
+            >
+              <GitHubIcon />
+            </IconButton>
+          )}
+          {deployed && (
+            <IconButton
+              href={deployed}
+              target="_blank"
+              aria-label={`deployed version of ${title}`}
+              rel="noopener noreferrer"
+            >
+              <OpenInNewIcon />
+            </IconButton>
+          )}
         </Box>
 
         <ResponsiveEllipsis
@@ -120,16 +121,15 @@ export default function ProjectCard({ project, theme }) {
           basedOn="letters"
         />
 
-        <Box className={classes.techStack}>
-          <Divider variant="middle" />
-          <Typography noWrap className={classes.techContainer}>
-            {tech.map((name) => (
-              <Box component="span" key={name}>
-                {name}
-              </Box>
-            ))}
-          </Typography>
-        </Box>
+        <Divider variant="middle" />
+
+        <Typography noWrap className={classes.techContainer}>
+          {tech.map((name, i) => (
+            <Box component="span" key={i}>
+              {name}
+            </Box>
+          ))}
+        </Typography>
       </CardContent>
     </Card>
   );
