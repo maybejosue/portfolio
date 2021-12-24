@@ -44,23 +44,7 @@ export default function Projects() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
-
-    responsive: [
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 1,
-          centerMode: true,
-        },
-      },
-      {
-        breakpoint: 650,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+    slidesToShow: 1,
   };
 
   return (
