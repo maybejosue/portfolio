@@ -3,6 +3,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import { Home } from "./components";
 import Resume from "./components/resume/Resume.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/helpers/Layout.js";
 
 const getDesignTokens = (mode) => ({
   breakpoints: {
@@ -65,7 +66,9 @@ function App() {
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <Routes>
-          <Route path="/" element={<Home mode={mode} setMode={setMode} />} />
+          <Route path="/" element={<Layout mode={mode} setMode={setMode} />}>
+            <Route index element={<Home />} />
+          </Route>
           <Route path="resume" element={<Resume />} />
         </Routes>
       </ThemeProvider>
