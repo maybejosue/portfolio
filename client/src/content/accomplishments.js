@@ -1,5 +1,19 @@
 export const accomplishments = [
   {
+    title: "languages",
+    categories: ["language", "level"],
+    achievements: [
+      {
+        language: "English",
+        level: "Advanced",
+      },
+      {
+        language: "Spanish",
+        level: "Intermediate",
+      },
+    ],
+  },
+  {
     title: "certifications",
     categories: ["issuer", "year", "title", "link"],
     achievements: [
@@ -41,7 +55,7 @@ export const accomplishments = [
       },
       {
         issuer: "Bloomtech (formerly Lambda School)",
-        title: "Full-Stack Web Development + Technical Training",
+        title: "Full-Stack Web Development + Technical Interviewing",
         link: "https://www.credly.com/badges/13c57035-cf72-4e2d-9e05-7dee0de2e8c3/public_url",
         year: "2020",
       },
