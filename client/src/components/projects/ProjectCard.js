@@ -95,7 +95,7 @@ export default function ProjectCard({ project, theme }) {
             <IconButton
               href={github}
               target="_blank"
-              aria-label="github icon"
+              aria-label="Github"
               rel="noopener noreferrer"
             >
               <GitHubIcon />
@@ -105,7 +105,7 @@ export default function ProjectCard({ project, theme }) {
             <IconButton
               href={deployed}
               target="_blank"
-              aria-label={`deployed version of ${title}`}
+              aria-label="Open in new tab"
               rel="noopener noreferrer"
             >
               <OpenInNewIcon />
