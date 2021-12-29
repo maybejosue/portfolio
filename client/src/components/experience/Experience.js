@@ -6,8 +6,6 @@ import TabPanel from "./TabPanel.js";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import UpdateMessage from "../helpers/UpdateMessage.js";
 import { jobSearchStatus } from "../../content/";
-
-// Content
 import { workHistory } from "../../content/";
 
 const useStyles = makeStyles((theme) =>

@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) =>
 );
 
 export default function Layout({ theme, mode, setMode }) {
-  const classes = useStyles();
+  const classes = useStyles(theme);
 
   const updateMode = () => {
     setMode((prevMode) => {
