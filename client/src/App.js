@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { createTheme, ThemeProvider } from "@mui/material";
-import { Home } from "./components";
-import Resume from "./components/resume/Resume.js";
+import { Home, Resume } from "./components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/helpers/Layout.js";
 

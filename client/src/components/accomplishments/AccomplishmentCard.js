@@ -4,7 +4,6 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import OpenInNewOffIcon from "@mui/icons-material/OpenInNewOff";
 import { makeStyles, createStyles } from "@mui/styles";
-
 import {
   Typography,
   Box,
@@ -67,11 +66,17 @@ export default function AccomplishmentCard({ accomplishment }) {
         {achievements.length && (
           <Box>
             {open ? (
-              <IconButton onClick={() => setOpen(false)}>
+              <IconButton
+                onClick={() => setOpen(false)}
+                aria-label="Close dropdown"
+              >
                 <KeyboardArrowUpIcon />
               </IconButton>
             ) : (
-              <IconButton onClick={() => setOpen(true)}>
+              <IconButton
+                onClick={() => setOpen(true)}
+                aria-label="Open dropdown"
+              >
                 <KeyboardArrowDownIcon />
               </IconButton>
             )}
@@ -104,6 +109,7 @@ export default function AccomplishmentCard({ accomplishment }) {
                               href={achievement[category]}
                               target="_blank"
                               rel="noopener noreferrer"
+                              aria-label="Open in new tab"
                               disabled={!achievement[category]}
                             >
                               {achievement[category] ? (

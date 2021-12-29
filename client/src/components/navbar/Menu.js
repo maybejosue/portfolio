@@ -2,8 +2,6 @@ import React from "react";
 import { Box, Button, Drawer, IconButton } from "@mui/material";
 import { makeStyles, createStyles } from "@mui/styles";
 import MenuIcon from "@mui/icons-material/Menu";
-
-// Content
 import { tabs } from "../../content";
 
 const useStyles = makeStyles((theme) =>
