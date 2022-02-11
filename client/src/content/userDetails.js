@@ -60,11 +60,6 @@ export const userDetails = {
       link: "https://github.com/maybejosue",
       label: "Github",
     },
-    {
-      icon: <StarIcon />,
-      link: "https://leetcode.com/maybejosue/",
-      label: "Leetcode",
-    },
   ],
   contact: {
     icon: <EmailIcon />,
