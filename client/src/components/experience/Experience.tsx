@@ -1,33 +1,16 @@
-import React, { useState } from 'react'
-import Section from '../helpers/Section.js'
-import { Typography, Tabs, Tab, Box } from '@mui/material'
-import { makeStyles, createStyles } from '@mui/styles'
-import TabPanel from './TabPanel.js'
+import { useState } from 'react'
+import Section from '../helpers/Section'
+import { Typography, Tabs, Tab, Box, useTheme } from '@mui/material'
+import TabPanel from './TabPanel'
 import useMediaQuery from '@mui/material/useMediaQuery'
-import UpdateMessage from '../helpers/UpdateMessage.tsx'
+import UpdateMessage from '../helpers/UpdateMessage'
 import { jobSearchStatus } from '../../content/'
 import { workHistory } from '../../content/'
 
-const useStyles = makeStyles((theme) =>
-    createStyles({
-        tabsContainer: {
-            [theme.breakpoints.up('md')]: {
-                display: 'flex',
-            },
-        },
-        tabs: {
-            marginBottom: '2rem',
-        },
-        tab: {
-            textTransform: 'capitalize !important',
-        },
-    })
-)
-
-export default function Experience({ theme }) {
-    const classes = useStyles(theme)
+export default function Experience() {
     const [value, setValue] = useState(0)
-    const matches = useMediaQuery((theme) => theme.breakpoints.down('md'))
+    const theme = useTheme()
+    const matches = useMediaQuery(theme.breakpoints.down('md'))
 
     return (
         <Section sectionName="experience">
@@ -36,9 +19,12 @@ export default function Experience({ theme }) {
                 <UpdateMessage message="Currently Job Searching!" />
             )}
 
-            <Box className={classes.tabsContainer}>
+            <Box
+                sx={{
+                    display: { md: 'flex' },
+                }}
+            >
                 <Tabs
-                    className={classes.tabs}
                     value={value}
                     onChange={(e, v) => setValue(v)}
                     variant={matches ? 'scrollable' : 'standard'}
@@ -47,17 +33,20 @@ export default function Experience({ theme }) {
                     allowScrollButtonsMobile
                     aria-label="work history tabs"
                     orientation={matches ? 'horizontal' : 'vertical'}
+                    sx={{
+                        mb: '2rem',
+                    }}
                 >
                     {workHistory.map(({ companyName }, i) => (
                         <Tab
                             label={companyName}
                             key={i}
-                            className={classes.tab}
+                            sx={{ textTransform: 'capitalize' }}
                         />
                     ))}
                 </Tabs>
 
-                <TabPanel workHistory={workHistory[value]} />
+                <TabPanel {...workHistory[value]} />
             </Box>
         </Section>
     )
