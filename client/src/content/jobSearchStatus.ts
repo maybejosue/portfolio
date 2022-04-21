@@ -1,1 +1,1 @@
-export const jobSearchStatus = true
+export const jobSearchStatus = false
