@@ -60,6 +60,7 @@ export default function Navbar() {
                                             color: '#E6E5E8',
                                             bgcolor: 'secordary.main',
                                         }}
+                                        download="Josue Rodriguez Resume.pdf"
                                     >
                                         {name}
                                     </Button>

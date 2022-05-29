@@ -3,5 +3,5 @@ export const tabs = [
     { name: 'Experience', link: 'experience' },
     { name: 'Projects', link: 'projects' },
     { name: 'Accomplishments', link: 'accomplishments' },
-    // { name: 'Resume', link: 'resume' },
+    { name: 'Download Resume', link: '/resume.pdf' },
 ]

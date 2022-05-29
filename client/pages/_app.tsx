@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     const [mode, setMode] = useState<PaletteMode>('light')
 
     useEffect(() => {
-        setMode((localStorage.getItem('mode') as PaletteMode) || 'dark')
+        setMode((localStorage.getItem('mode') as PaletteMode) || 'light')
     }, [])
 
     const updateMode = useMemo(
