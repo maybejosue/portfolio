@@ -6,7 +6,7 @@ type Props = {
     children: ReactNode
 }
 
-export default function Section({ children, sectionName }: Props) {
+const Section = ({ children, sectionName }: Props) => {
     return (
         <section id={sectionName}>
             <Paper
@@ -21,3 +21,5 @@ export default function Section({ children, sectionName }: Props) {
         </section>
     )
 }
+
+export default Section
