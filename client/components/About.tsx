@@ -1,5 +1,13 @@
 import { Section } from 'components/utils'
-import { Box, Paper, Button, Typography, Avatar, Chip } from '@mui/material'
+import {
+    Box,
+    Paper,
+    Button,
+    Typography,
+    Avatar,
+    Chip,
+    Link,
+} from '@mui/material'
 import { LocationOn as LocationOnIcon } from '@mui/icons-material'
 import { userDetails } from 'content'
 
@@ -8,7 +16,6 @@ const About = () => {
         name,
         profession,
         location: { city, state },
-        description,
         socials,
         avatar: { src },
         contact: { icon, link, headline, label },
@@ -56,7 +63,43 @@ const About = () => {
                     }}
                 />
             </Box>
-            {description}
+            <Box>
+                <Typography paragraph>
+                    Hey, I'm Josue Rodriguez, a software engineer based in
+                    Hemet, CA.
+                </Typography>
+                <Typography paragraph>
+                    My professional career started when I dropped out of college
+                    to attend{' '}
+                    <Link
+                        href={'https://www.bloomtech.com/'}
+                        color="secondary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Bloomtech (
+                        <Box component="span" fontStyle="italic">
+                            formerly Lambda School
+                        </Box>
+                        )
+                    </Link>
+                    ; a technical training program designed to teach full-stack
+                    web development and computer science fundamentals.
+                </Typography>
+                <Typography paragraph>
+                    After I graduated from Bloomtech, I worked as a Code
+                    Reviewer, where I provided actionable feedback to student
+                    developers on their sprint challenge submissions. While I
+                    enjoyed my time as a Code Reviewer, I left the position to
+                    focus on finding a full-time Software Engineering role whose
+                    products and projects I'm passionate about.
+                </Typography>
+                <Typography paragraph>
+                    On a more personal note, I enjoy watching anime, reading
+                    manga, struggling through Leetcode challenges, and immersing
+                    myself in the sneaker-twitter community.
+                </Typography>
+            </Box>
             <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                 <Box
                     sx={{
