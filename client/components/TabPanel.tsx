@@ -9,7 +9,7 @@ import {
 import { Typography, Box, Avatar, IconButton } from '@mui/material'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'
-import { Job } from '../interfaces/commonTypes.interface'
+import { Job } from 'interfaces/commonTypes.interface'
 
 const capitalizeFirstLetterOfEachWord = (str: string) => {
     const words = str.split(' ')

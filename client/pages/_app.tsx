@@ -9,12 +9,12 @@ import {
     CssBaseline,
     PaletteMode,
 } from '@mui/material'
-import { Navbar } from '../components/'
+import { Navbar } from 'components'
 import {
     DarkMode as DarkModeIcon,
     LightMode as LightModeIcon,
 } from '@mui/icons-material'
-import getTheme from '../theme/getTheme'
+import getTheme from 'theme/getTheme'
 
 function MyApp({ Component, pageProps }: AppProps) {
     const [mode, setMode] = useState<PaletteMode>('light')

@@ -1,7 +1,7 @@
-import cc from '../assets/cc.webp'
-import wlj from '../assets/wlj.webp'
-import aa from '../assets/aa.webp'
-import sa from '../assets/sa.webp'
+import cc from 'assets/cc.webp'
+import wlj from 'assets/wlj.webp'
+import aa from 'assets/aa.webp'
+import sa from 'assets/sa.webp'
 
 export const projects = [
     {

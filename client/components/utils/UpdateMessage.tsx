@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Collapse, Alert } from '@mui/material'
-import UpdateIcon from '@mui/icons-material/Update'
+import { Update as UpdateIcon } from '@mui/icons-material'
 
 type MuiSeverityAndColor = 'info' | 'warning' | 'error' | 'success'
 

@@ -1,9 +1,9 @@
 import Slider from 'react-slick'
 import { Box } from '@mui/material'
-import { projects } from '../content'
+import { projects } from 'content'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import ProjectCard from './ProjectCard'
+import { ProjectCard } from 'components'
 
 const NextArrow = (props: any) => {
     const { className, style, onClick } = props

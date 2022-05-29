@@ -1,7 +1,7 @@
-import Section from './utils/Section'
-import AccomplishmentCard from './AccomplishmentCard'
+import { Section } from 'components/utils'
+import { AccomplishmentCard } from 'components'
 import { Typography } from '@mui/material'
-import { accomplishments } from '../content'
+import { accomplishments } from 'content'
 
 const Accomplishments = () => {
     return (

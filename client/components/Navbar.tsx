@@ -1,10 +1,9 @@
 import { useState } from 'react'
 import { Box, Button, useMediaQuery, useTheme } from '@mui/material'
-import Logo from './Logo'
-import Menu from './Menu'
-import HideOnScroll from './utils/HideOnScroll'
+import { Logo, Menu } from 'components'
+import { HideOnScroll } from 'components/utils'
 import { scroller } from 'react-scroll'
-import { tabs } from '../content'
+import { tabs } from 'content'
 
 const Navbar = () => {
     const theme = useTheme()

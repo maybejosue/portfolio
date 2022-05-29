@@ -5,7 +5,7 @@ import {
     Accomplishments,
     Greeting,
     About,
-} from '../components'
+} from 'components'
 
 const Home: NextPage = () => {
     return (
