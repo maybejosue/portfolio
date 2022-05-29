@@ -1,8 +1,9 @@
+import { ReactNode } from 'react'
 import { Paper } from '@mui/material'
 
 type Props = {
     sectionName: string
-    children: React.ReactNode
+    children: ReactNode
 }
 
 export default function Section({ children, sectionName }: Props) {
