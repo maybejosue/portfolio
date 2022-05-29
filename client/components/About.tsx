@@ -1,8 +1,7 @@
-import Section from './utils/Section'
-import { Box, Paper, Button, Typography, Avatar } from '@mui/material'
-import LocationOnIcon from '@mui/icons-material/LocationOn'
-import Chip from '@mui/material/Chip'
-import { userDetails } from '../content'
+import { Section } from 'components/utils'
+import { Box, Paper, Button, Typography, Avatar, Chip } from '@mui/material'
+import { LocationOn as LocationOnIcon } from '@mui/icons-material'
+import { userDetails } from 'content'
 
 const About = () => {
     const {

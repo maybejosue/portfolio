@@ -1,5 +1,5 @@
 import { Box, Typography, Button } from '@mui/material'
-import { greeting } from '../content'
+import { greeting } from 'content'
 import ParkIcon from '@mui/icons-material/Park'
 
 const Greeting = () => {

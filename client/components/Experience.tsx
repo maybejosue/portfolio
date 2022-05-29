@@ -1,11 +1,15 @@
 import { useState } from 'react'
-import Section from './utils/Section'
-import { Typography, Tabs, Tab, Box, useTheme } from '@mui/material'
-import TabPanel from './TabPanel'
-import useMediaQuery from '@mui/material/useMediaQuery'
-import UpdateMessage from './utils/UpdateMessage'
-import { jobSearchStatus } from '../content/'
-import { workHistory } from '../content/'
+import { Section, UpdateMessage } from 'components/utils'
+import {
+    Typography,
+    Tabs,
+    Tab,
+    Box,
+    useTheme,
+    useMediaQuery,
+} from '@mui/material'
+import { TabPanel } from 'components'
+import { jobSearchStatus, workHistory } from 'content'
 
 const Experience = () => {
     const [value, setValue] = useState(0)

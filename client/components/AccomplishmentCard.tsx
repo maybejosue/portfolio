@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
-import OpenInNewIcon from '@mui/icons-material/OpenInNew'
-import OpenInNewOffIcon from '@mui/icons-material/OpenInNewOff'
+import {
+    KeyboardArrowUp as KeyboardArrowUpIcon,
+    KeyboardArrowDown as KeyboardArrowDownIcon,
+    OpenInNew as OpenInNewIcon,
+    OpenInNewOff as OpenInNewOffIcon,
+} from '@mui/icons-material'
 import {
     Typography,
     Box,

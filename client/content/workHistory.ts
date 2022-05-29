@@ -1,5 +1,5 @@
-import BloomTechIMG from '../assets/bloomtech.webp'
-import { Job } from '../interfaces/commonTypes.interface'
+import BloomTechIMG from 'assets/bloomtech.webp'
+import { Job } from 'interfaces/commonTypes.interface'
 
 const bloomtech: Job = {
     company: {
