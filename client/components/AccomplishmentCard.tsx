@@ -40,7 +40,7 @@ interface Accompishments {
     data: any[]
 }
 
-export default function AccomplishmentCard(accomplishment: Accompishments) {
+const AccomplishmentCard = (accomplishment: Accompishments) => {
     const [open, setOpen] = useState(false)
     const { title, categories, data } = accomplishment
 
@@ -163,3 +163,5 @@ export default function AccomplishmentCard(accomplishment: Accompishments) {
         </Box>
     )
 }
+
+export default AccomplishmentCard

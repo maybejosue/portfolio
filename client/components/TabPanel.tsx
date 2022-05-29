@@ -20,7 +20,7 @@ const capitalizeFirstLetterOfEachWord = (str: string) => {
     return capitalizedWords.join(' ')
 }
 
-export default function TabPanel({ company, positions }: Job) {
+const TabPanel = ({ company, positions }: Job) => {
     const {
         logo: { src },
         name,
@@ -159,3 +159,5 @@ export default function TabPanel({ company, positions }: Job) {
         </Box>
     )
 }
+
+export default TabPanel

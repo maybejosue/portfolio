@@ -39,7 +39,7 @@ const PrevArrow = (props: any) => {
     )
 }
 
-export default function Projects() {
+const Projects = () => {
     const settings = {
         dots: true,
         infinite: true,
@@ -65,3 +65,5 @@ export default function Projects() {
         </section>
     )
 }
+
+export default Projects

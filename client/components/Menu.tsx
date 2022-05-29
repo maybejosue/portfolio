@@ -8,11 +8,7 @@ type Props = {
     scrollToSection: (section: string) => void
 }
 
-export default function Menu({
-    setIsMenuOpen,
-    isMenuOpen,
-    scrollToSection,
-}: Props) {
+const Menu = ({ setIsMenuOpen, isMenuOpen, scrollToSection }: Props) => {
     const closeMenu = () => {
         setIsMenuOpen(false)
     }
@@ -69,3 +65,5 @@ export default function Menu({
         </>
     )
 }
+
+export default Menu

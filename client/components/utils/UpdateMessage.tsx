@@ -11,12 +11,7 @@ interface AlertProps {
     color?: MuiSeverityAndColor
 }
 
-export default function UpdateMessage({
-    message,
-    color,
-    icon,
-    severity,
-}: AlertProps) {
+const UpdateMessage = ({ message, color, icon, severity }: AlertProps) => {
     const [open, setOpen] = useState(true)
     return (
         <Collapse in={open}>
@@ -34,3 +29,5 @@ export default function UpdateMessage({
         </Collapse>
     )
 }
+
+export default UpdateMessage

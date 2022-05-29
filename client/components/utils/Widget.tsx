@@ -1,11 +1,12 @@
+import { ReactNode } from 'react'
 import { Paper } from '@mui/material'
 
 type Props = {
     sectionName: string
-    children: React.ReactNode
+    children: ReactNode
 }
 
-export default function Section({ children, sectionName }: Props) {
+const Section = ({ children, sectionName }: Props) => {
     return (
         <section id={sectionName}>
             <Paper
@@ -20,3 +21,5 @@ export default function Section({ children, sectionName }: Props) {
         </section>
     )
 }
+
+export default Section

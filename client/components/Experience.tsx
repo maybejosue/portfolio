@@ -7,7 +7,7 @@ import UpdateMessage from './utils/UpdateMessage'
 import { jobSearchStatus } from '../content/'
 import { workHistory } from '../content/'
 
-export default function Experience() {
+const Experience = () => {
     const [value, setValue] = useState(0)
     const theme = useTheme()
     const matches = useMediaQuery(theme.breakpoints.down('md'))
@@ -51,3 +51,5 @@ export default function Experience() {
         </Section>
     )
 }
+
+export default Experience

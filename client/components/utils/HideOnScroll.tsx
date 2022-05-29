@@ -1,7 +1,11 @@
+import { ReactElement } from 'react'
 import { useScrollTrigger, Slide } from '@mui/material'
-import { Children } from '../../interfaces/commonTypes.interface'
 
-export default function HideOnScroll({ children }: Children) {
+interface Props {
+    children: ReactElement
+}
+
+const HideOnScroll = ({ children }: Props) => {
     const trigger = useScrollTrigger()
     return (
         <Slide appear={false} direction="down" in={!trigger}>
@@ -9,3 +13,5 @@ export default function HideOnScroll({ children }: Children) {
         </Slide>
     )
 }
+
+export default HideOnScroll

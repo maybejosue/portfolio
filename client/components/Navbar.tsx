@@ -6,7 +6,7 @@ import HideOnScroll from './utils/HideOnScroll'
 import { scroller } from 'react-scroll'
 import { tabs } from '../content'
 
-export default function Navbar() {
+const Navbar = () => {
     const theme = useTheme()
 
     const [isMenuOpen, setIsMenuOpen] = useState(
@@ -60,6 +60,7 @@ export default function Navbar() {
                                             color: '#E6E5E8',
                                             bgcolor: 'secordary.main',
                                         }}
+                                        download="Josue Rodriguez Resume.pdf"
                                     >
                                         {name}
                                     </Button>
@@ -94,3 +95,5 @@ export default function Navbar() {
         </HideOnScroll>
     )
 }
+
+export default Navbar

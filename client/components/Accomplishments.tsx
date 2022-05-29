@@ -3,7 +3,7 @@ import AccomplishmentCard from './AccomplishmentCard'
 import { Typography } from '@mui/material'
 import { accomplishments } from '../content'
 
-export default function Accomplishments() {
+const Accomplishments = () => {
     return (
         <Section sectionName={'accomplishments'}>
             <Typography
@@ -19,3 +19,5 @@ export default function Accomplishments() {
         </Section>
     )
 }
+
+export default Accomplishments

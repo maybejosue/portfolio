@@ -2,7 +2,7 @@ import { Box, Typography, Button } from '@mui/material'
 import { greeting } from '../content'
 import ParkIcon from '@mui/icons-material/Park'
 
-export default function Greeting() {
+const Greeting = () => {
     const { headline, name, status, oneliner, link } = greeting
 
     return (
@@ -52,3 +52,5 @@ export default function Greeting() {
         </section>
     )
 }
+
+export default Greeting
