@@ -28,7 +28,7 @@ interface Props {
 
 const ResponsiveEllipsis = responsiveHOC()(LinesEllipsis)
 
-export default function ProjectCard(project: Props) {
+const ProjectCard = (project: Props) => {
     const {
         title,
         img: { src },
@@ -132,3 +132,5 @@ export default function ProjectCard(project: Props) {
         </Card>
     )
 }
+
+export default ProjectCard

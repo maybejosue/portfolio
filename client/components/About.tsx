@@ -4,7 +4,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn'
 import Chip from '@mui/material/Chip'
 import { userDetails } from '../content'
 
-export default function About() {
+const About = () => {
     const {
         name,
         profession,
@@ -108,3 +108,5 @@ export default function About() {
         </Section>
     )
 }
+
+export default About

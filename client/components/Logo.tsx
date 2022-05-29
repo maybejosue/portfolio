@@ -1,6 +1,6 @@
 import { Typography, Box } from '@mui/material'
 
-export default function Logo() {
+const Logo = () => {
     return (
         <Typography
             color="primary"
@@ -23,3 +23,5 @@ export default function Logo() {
         </Typography>
     )
 }
+
+export default Logo

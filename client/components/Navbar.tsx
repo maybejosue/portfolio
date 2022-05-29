@@ -6,7 +6,7 @@ import HideOnScroll from './utils/HideOnScroll'
 import { scroller } from 'react-scroll'
 import { tabs } from '../content'
 
-export default function Navbar() {
+const Navbar = () => {
     const theme = useTheme()
 
     const [isMenuOpen, setIsMenuOpen] = useState(
@@ -95,3 +95,5 @@ export default function Navbar() {
         </HideOnScroll>
     )
 }
+
+export default Navbar
