@@ -31,36 +31,31 @@ const Menu = ({ setIsMenuOpen, isMenuOpen, scrollToSection, tabs }: Props) => {
                         display: 'grid',
                     }}
                 >
-                    {tabs.map(({ name, link }, i, arr) =>
-                        i === arr.length - 1 ? (
-                            <Button
-                                variant="contained"
-                                key={i}
-                                href={link}
-                                rel="noopener noreferrer"
-                                startIcon={<DownloadIcon />}
-                                sx={{
-                                    m: '0.2rem',
-                                    textTransform: 'capitalize',
-                                    color: '#E6E5E8',
-                                    bgcolor: 'secordary.main',
-                                }}
-                            >
-                                {name}
-                            </Button>
-                        ) : (
-                            <Button
-                                key={i}
-                                onClick={() => scrollToSection(link)}
-                                sx={{
-                                    m: '0.2rem',
-                                    textTransform: 'capitalize',
-                                }}
-                            >
-                                {name}
-                            </Button>
-                        )
-                    )}
+                    {tabs.map(({ name, link }, i) => (
+                        <Button
+                            key={i}
+                            onClick={() => scrollToSection(link)}
+                            sx={{
+                                m: '0.2rem',
+                                textTransform: 'capitalize',
+                            }}
+                        >
+                            {name}
+                        </Button>
+                    ))}
+                    <Button
+                        variant="contained"
+                        href="/resume.pdf"
+                        sx={{
+                            m: '0.2rem',
+                            textTransform: 'capitalize',
+                            color: '#E6E5E8',
+                            bgcolor: 'secordary.main',
+                        }}
+                        startIcon={<DownloadIcon />}
+                    >
+                        Resume
+                    </Button>
                 </Box>
             </Drawer>
         </>
