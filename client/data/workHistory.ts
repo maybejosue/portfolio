@@ -1,4 +1,5 @@
-import BloomTechIMG from 'assets/bloomtech.webp'
+import bloomTechIMG from 'assets/bloomtech.webp'
+import mintMobileIMG from 'assets/mintmobile.webp'
 import { StaticImageData } from 'next/image'
 
 export interface Company {
@@ -31,9 +32,37 @@ export interface Job {
     positions: Position[]
 }
 
+const mintmobile: Job = {
+    company: {
+        logo: mintMobileIMG,
+        name: 'Mint Mobile',
+        site: 'https://www.mintmobile.com/',
+    },
+    positions: [
+        {
+            title: 'Software Engineer Intern',
+            startDate: {
+                month: 'apr',
+                year: 2022,
+            },
+            endDate: {
+                isPresent: true,
+                month: '',
+                year: 2022,
+            },
+            location: {
+                isRemote: true,
+                city: '',
+                state: '',
+            },
+            contributions: [],
+        },
+    ],
+}
+
 const bloomtech: Job = {
     company: {
-        logo: BloomTechIMG,
+        logo: bloomTechIMG,
         name: 'bloomtech',
         formerName: 'lambda school',
         site: 'https://www.bloomtech.com/',
@@ -97,4 +126,4 @@ const reseller: Job = {
     ],
 }
 
-export const workHistory = [bloomtech, reseller]
+export const workHistory = [mintmobile, bloomtech, reseller]
