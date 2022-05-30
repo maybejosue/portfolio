@@ -28,6 +28,7 @@ const Navbar = () => {
             smooth: true,
             offset: -60,
         })
+        setIsMenuOpen(false)
     }
 
     const desktopMenu = (
