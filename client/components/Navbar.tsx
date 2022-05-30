@@ -4,6 +4,7 @@ import { Logo, Menu } from 'components'
 import { HideOnScroll } from 'components/utils'
 import { scroller } from 'react-scroll'
 import { tabs } from 'content'
+import { Download as DownloadIcon } from '@mui/icons-material'
 
 const Navbar = () => {
     const theme = useTheme()
@@ -59,6 +60,7 @@ const Navbar = () => {
                                             color: '#E6E5E8',
                                             bgcolor: 'secordary.main',
                                         }}
+                                        startIcon={<DownloadIcon />}
                                         download="Josue Rodriguez Resume.pdf"
                                     >
                                         {name}

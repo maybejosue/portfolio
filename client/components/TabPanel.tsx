@@ -28,8 +28,6 @@ const TabPanel = ({ company, positions }: Job) => {
         site,
     } = company
 
-    console.log(src)
-
     return (
         <Box
             role="tabpanel"

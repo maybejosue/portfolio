@@ -1,5 +1,5 @@
 import { Box, Button, Drawer, IconButton } from '@mui/material'
-import MenuIcon from '@mui/icons-material/Menu'
+import { Menu as MenuIcon, Download as DownloadIcon } from '@mui/icons-material'
 import { tabs } from 'content'
 
 type Props = {
@@ -38,6 +38,7 @@ const Menu = ({ setIsMenuOpen, isMenuOpen, scrollToSection }: Props) => {
                                 key={i}
                                 href={link}
                                 rel="noopener noreferrer"
+                                startIcon={<DownloadIcon />}
                                 sx={{
                                     m: '0.2rem',
                                     textTransform: 'capitalize',

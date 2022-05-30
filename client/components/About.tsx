@@ -131,10 +131,10 @@ const About = () => {
 
                 <Button
                     variant="contained"
-                    startIcon={icon}
                     target="_black"
                     href={link}
                     aria-label={label}
+                    startIcon={icon}
                     rel="noopener noreferrer"
                     sx={{
                         minWidth: '0',

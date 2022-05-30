@@ -3,7 +3,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import StarIcon from '@mui/icons-material/Star'
 import img from 'assets/josue.webp'
-import { Typography, Box, Link } from '@mui/material'
 
 export const userDetails = {
     name: 'Josue Rodriguez',
