@@ -39,7 +39,11 @@ const TabPanel = ({ company, positions }: Job) => {
                 }}
             >
                 <Avatar alt={`${name} logo`}>
-                    <Image src={logo} layout="fill" />
+                    {logo ? (
+                        <Image src={logo} layout="fill" />
+                    ) : (
+                        name[0].toUpperCase()
+                    )}
                 </Avatar>
 
                 <Typography

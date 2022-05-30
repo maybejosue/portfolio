@@ -1,14 +1,14 @@
 import { Box, Button, Drawer, IconButton } from '@mui/material'
 import { Menu as MenuIcon, Download as DownloadIcon } from '@mui/icons-material'
-import { tabs } from './tabs'
 
 type Props = {
     setIsMenuOpen: (isMenuOpen: boolean) => void
     isMenuOpen: boolean
     scrollToSection: (section: string) => void
+    tabs: Array<{ name: string; link: string }>
 }
 
-const Menu = ({ setIsMenuOpen, isMenuOpen, scrollToSection }: Props) => {
+const Menu = ({ setIsMenuOpen, isMenuOpen, scrollToSection, tabs }: Props) => {
     const closeMenu = () => {
         setIsMenuOpen(false)
     }
