@@ -1,5 +1,5 @@
 import { Section, Widget } from 'components/utils'
-import { AccomplishmentCard } from 'components'
+import Dropdown from './Dropdown'
 import { Typography } from '@mui/material'
 import { accomplishments } from 'content'
 
@@ -15,7 +15,7 @@ const Accomplishments = () => {
                     Accomplishments
                 </Typography>
                 {accomplishments.map((accomplishment, i) => (
-                    <AccomplishmentCard {...accomplishment} key={i} />
+                    <Dropdown {...accomplishment} key={i} />
                 ))}
             </Widget>
         </Section>

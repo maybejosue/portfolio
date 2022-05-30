@@ -42,7 +42,7 @@ interface Accompishments {
     data: any[]
 }
 
-const AccomplishmentCard = (accomplishment: Accompishments) => {
+const Dropdown = (accomplishment: Accompishments) => {
     const [open, setOpen] = useState(false)
     const { title, categories, data } = accomplishment
 
@@ -166,4 +166,4 @@ const AccomplishmentCard = (accomplishment: Accompishments) => {
     )
 }
 
-export default AccomplishmentCard
+export default Dropdown

@@ -10,7 +10,6 @@ import {
     PaletteMode,
 } from '@mui/material'
 import { Navbar } from 'components'
-import { HideOnScroll } from 'components/utils'
 import {
     DarkMode as DarkModeIcon,
     LightMode as LightModeIcon,

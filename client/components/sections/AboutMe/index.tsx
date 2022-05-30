@@ -11,7 +11,7 @@ import {
 import { LocationOn as LocationOnIcon } from '@mui/icons-material'
 import { userDetails } from 'content'
 
-const About = () => {
+const AboutMe = () => {
     const {
         name,
         profession,
@@ -155,4 +155,4 @@ const About = () => {
     )
 }
 
-export default About
+export default AboutMe

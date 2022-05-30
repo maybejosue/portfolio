@@ -1,18 +1,25 @@
 import type { NextPage } from 'next'
+// import {
+//     Experience,
+//     Projects,
+//     Accomplishments,
+//     Greeting,
+//     About,
+// } from 'components'
 import {
-    Experience,
-    Projects,
+    Banner,
+    AboutMe,
+    WorkHistory,
     Accomplishments,
-    Greeting,
-    About,
-} from 'components'
+    Projects,
+} from 'components/sections'
 
 const Home: NextPage = () => {
     return (
         <>
-            <Greeting />
-            <About />
-            <Experience />
+            <Banner />
+            <AboutMe />
+            <WorkHistory />
             <Projects />
             <Accomplishments />
         </>

@@ -8,10 +8,10 @@ import {
     useTheme,
     useMediaQuery,
 } from '@mui/material'
-import { TabPanel } from 'components'
+import TabPanel from './TabPanel'
 import { jobSearchStatus, workHistory } from 'content'
 
-const Experience = () => {
+const WorkHistory = () => {
     const [value, setValue] = useState(0)
     const theme = useTheme()
     const matches = useMediaQuery(theme.breakpoints.down('md'))
@@ -58,4 +58,4 @@ const Experience = () => {
     )
 }
 
-export default Experience
+export default WorkHistory
