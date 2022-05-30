@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Section, UpdateMessage } from 'components/utils'
+import { Section, UpdateMessage, Widget } from 'components/utils'
 import {
     Typography,
     Tabs,
@@ -17,41 +17,43 @@ const Experience = () => {
     const matches = useMediaQuery(theme.breakpoints.down('md'))
 
     return (
-        <Section sectionName="experience">
-            <Typography paragraph>Work History</Typography>
-            {jobSearchStatus && (
-                <UpdateMessage message="Currently Job Searching!" />
-            )}
+        <Section name="experience">
+            <Widget>
+                <Typography paragraph>Work History</Typography>
+                {jobSearchStatus && (
+                    <UpdateMessage message="Currently Job Searching!" />
+                )}
 
-            <Box
-                sx={{
-                    display: { md: 'flex' },
-                }}
-            >
-                <Tabs
-                    value={value}
-                    onChange={(e, v) => setValue(v)}
-                    variant={matches ? 'scrollable' : 'standard'}
-                    indicatorColor="secondary"
-                    scrollButtons
-                    allowScrollButtonsMobile
-                    aria-label="work history tabs"
-                    orientation={matches ? 'horizontal' : 'vertical'}
+                <Box
                     sx={{
-                        mb: '2rem',
+                        display: { md: 'flex' },
                     }}
                 >
-                    {workHistory.map(({ company: { name } }, i) => (
-                        <Tab
-                            label={name}
-                            key={i}
-                            sx={{ textTransform: 'capitalize' }}
-                        />
-                    ))}
-                </Tabs>
+                    <Tabs
+                        value={value}
+                        onChange={(e, v) => setValue(v)}
+                        variant={matches ? 'scrollable' : 'standard'}
+                        indicatorColor="secondary"
+                        scrollButtons
+                        allowScrollButtonsMobile
+                        aria-label="work history tabs"
+                        orientation={matches ? 'horizontal' : 'vertical'}
+                        sx={{
+                            mb: '2rem',
+                        }}
+                    >
+                        {workHistory.map(({ company: { name } }, i) => (
+                            <Tab
+                                label={name}
+                                key={i}
+                                sx={{ textTransform: 'capitalize' }}
+                            />
+                        ))}
+                    </Tabs>
 
-                <TabPanel {...workHistory[value]} />
-            </Box>
+                    <TabPanel {...workHistory[value]} />
+                </Box>
+            </Widget>
         </Section>
     )
 }

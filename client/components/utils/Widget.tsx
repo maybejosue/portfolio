@@ -2,24 +2,21 @@ import { ReactNode } from 'react'
 import { Paper } from '@mui/material'
 
 type Props = {
-    sectionName: string
     children: ReactNode
 }
 
-const Section = ({ children, sectionName }: Props) => {
+const Widget = ({ children }: Props) => {
     return (
-        <section id={sectionName}>
-            <Paper
-                elevation={0}
-                sx={{
-                    p: '1rem',
-                    mb: '1rem',
-                }}
-            >
-                {children}
-            </Paper>
-        </section>
+        <Paper
+            elevation={0}
+            sx={{
+                p: '1rem',
+                mb: '1rem',
+            }}
+        >
+            {children}
+        </Paper>
     )
 }
 
-export default Section
+export default Widget
