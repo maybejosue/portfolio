@@ -4,14 +4,8 @@ import Logo from './Logo'
 import Menu from './Menu'
 import { HideOnScroll } from 'components/utils'
 import { scroller } from 'react-scroll'
-
-export const tabs = [
-    { name: 'About', link: 'about' },
-    { name: 'Experience', link: 'experience' },
-    { name: 'Projects', link: 'projects' },
-    { name: 'Accomplishments', link: 'accomplishments' },
-    { name: 'Resume', link: 'resume' },
-]
+import { tabs } from './tabs'
+import { Download as DownloadIcon } from '@mui/icons-material'
 
 const Navbar = () => {
     const theme = useTheme()
@@ -55,36 +49,33 @@ const Navbar = () => {
                                 display: { xs: 'none', md: 'block' },
                             }}
                         >
-                            {tabs.map(({ name, link }, i, arr) =>
-                                i === arr.length - 1 ? (
-                                    <Button
-                                        variant="contained"
-                                        key={i}
-                                        href={link}
-                                        sx={{
-                                            m: '0.2rem',
-                                            textTransform: 'capitalize',
-                                            color: '#E6E5E8',
-                                            bgcolor: 'secordary.main',
-                                        }}
-                                    >
-                                        {name}
-                                    </Button>
-                                ) : (
-                                    <Button
-                                        key={i}
-                                        onClick={() => {
-                                            // scrollToSection(link)
-                                        }}
-                                        sx={{
-                                            m: '0.2rem',
-                                            textTransform: 'capitalize',
-                                        }}
-                                    >
-                                        {name}
-                                    </Button>
-                                )
-                            )}
+                            {tabs.map(({ name, link }, i, arr) => (
+                                <Button
+                                    key={i}
+                                    onClick={() => {
+                                        scrollToSection(link)
+                                    }}
+                                    sx={{
+                                        m: '0.2rem',
+                                        textTransform: 'capitalize',
+                                    }}
+                                >
+                                    {name}
+                                </Button>
+                            ))}
+                            <Button
+                                variant="contained"
+                                href="/resume.pdf"
+                                sx={{
+                                    m: '0.2rem',
+                                    textTransform: 'capitalize',
+                                    color: '#E6E5E8',
+                                    bgcolor: 'secordary.main',
+                                }}
+                                startIcon={<DownloadIcon />}
+                            >
+                                Resume
+                            </Button>
                         </Box>
 
                         {/* Mobile tabs */}

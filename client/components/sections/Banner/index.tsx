@@ -1,13 +1,13 @@
 import { Box, Typography, Button } from '@mui/material'
-import { greeting } from 'content'
+import { banner } from 'data'
 import ParkIcon from '@mui/icons-material/Park'
 import { Section } from 'components/utils'
 
 const Banner = () => {
-    const { headline, name, status, oneliner, link } = greeting
+    const { headline, name, status, oneliner, link } = banner
 
     return (
-        <Section name="greeting">
+        <Section name="home">
             <Box sx={{ p: '9rem 1rem ' }}>
                 <Typography color="primary" gutterBottom variant="subtitle1">
                     {headline}

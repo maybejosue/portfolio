@@ -10,6 +10,7 @@ import { Typography, Box, Avatar, IconButton } from '@mui/material'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 import { Job } from 'interfaces/commonTypes.interface'
+import Image from 'next/image'
 
 const capitalizeFirstLetterOfEachWord = (str: string) => {
     const words = str.split(' ')
@@ -21,12 +22,7 @@ const capitalizeFirstLetterOfEachWord = (str: string) => {
 }
 
 const TabPanel = ({ company, positions }: Job) => {
-    const {
-        logo: { src },
-        name,
-        formerName,
-        site,
-    } = company
+    const { logo, name, formerName, site } = company
 
     return (
         <Box
@@ -42,7 +38,9 @@ const TabPanel = ({ company, positions }: Job) => {
                     ml: '0.5rem',
                 }}
             >
-                <Avatar src={src} alt={`${name} logo`} />
+                <Avatar alt={`${name} logo`}>
+                    <Image src={logo} layout="fill" />
+                </Avatar>
 
                 <Typography
                     variant="h6"

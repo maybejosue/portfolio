@@ -9,7 +9,7 @@ import {
     Link,
 } from '@mui/material'
 import { LocationOn as LocationOnIcon } from '@mui/icons-material'
-import { userDetails } from 'content'
+import { aboutMe } from 'data'
 
 const AboutMe = () => {
     const {
@@ -19,10 +19,10 @@ const AboutMe = () => {
         socials,
         avatar: { src },
         contact: { icon, link, headline, label },
-    } = userDetails
+    } = aboutMe
 
     return (
-        <Section name="about">
+        <Section name="aboutMe">
             <Widget>
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: '2rem' }}>
                     <Paper elevation={8}>

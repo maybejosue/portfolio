@@ -1,4 +1,4 @@
-export const greeting = {
+export const banner = {
     headline: 'Hey, my name is',
     name: 'Josue Rodriguez',
     oneliner: 'I design and build software',

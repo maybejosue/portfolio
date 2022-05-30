@@ -1,11 +1,7 @@
-import { ReactElement } from 'react'
-
-export type Children = { children: ReactElement }
+import { StaticImageData } from 'next/image'
 
 export interface Company {
-    logo: {
-        src: string
-    }
+    logo: string | StaticImageData
     name: string
     formerName?: string
     site?: string
@@ -29,7 +25,6 @@ export interface Position {
     }
     contributions: string[]
 }
-
 export interface Job {
     company: Company
     positions: Position[]
