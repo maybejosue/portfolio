@@ -4,8 +4,15 @@ import Logo from './Logo'
 import Menu from './Menu'
 import { HideOnScroll } from 'components/utils'
 import { scroller } from 'react-scroll'
-import { tabs } from './tabs'
 import { Download as DownloadIcon } from '@mui/icons-material'
+
+export const tabs = [
+    { name: 'Home', link: 'home' },
+    { name: 'About', link: 'aboutMe' },
+    { name: 'Experience', link: 'workHistory' },
+    { name: 'Projects', link: 'projects' },
+    { name: 'Achievements', link: 'achievements' },
+]
 
 const Navbar = () => {
     const theme = useTheme()
@@ -81,6 +88,7 @@ const Navbar = () => {
                         {/* Mobile tabs */}
                         <Box sx={{ display: { md: 'none' } }}>
                             <Menu
+                                tabs={tabs}
                                 setIsMenuOpen={setIsMenuOpen}
                                 isMenuOpen={isMenuOpen}
                                 scrollToSection={scrollToSection}
