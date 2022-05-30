@@ -25,74 +25,72 @@ const Navbar = () => {
 
     return (
         <HideOnScroll>
-            <nav>
+            <Box
+                sx={{
+                    zIndex: 'appBar',
+                    width: '100%',
+                    position: 'fixed',
+                    backgroundColor: 'background.paper',
+                }}
+            >
                 <Box
                     sx={{
-                        zIndex: 'appBar',
-                        width: '100%',
-                        position: 'fixed',
-                        backgroundColor: 'background.paper',
+                        p: '0.75rem',
+                        display: 'flex',
                     }}
                 >
+                    <Logo />
+
+                    {/* Desktop tabs */}
                     <Box
                         sx={{
-                            p: '0.75rem',
-                            display: 'flex',
+                            display: { xs: 'none', md: 'block' },
                         }}
                     >
-                        <Logo />
+                        {tabs.map(({ name, link }, i, arr) =>
+                            i === arr.length - 1 ? (
+                                <Button
+                                    variant="contained"
+                                    key={i}
+                                    href={link}
+                                    sx={{
+                                        m: '0.2rem',
+                                        textTransform: 'capitalize',
+                                        color: '#E6E5E8',
+                                        bgcolor: 'secordary.main',
+                                    }}
+                                    startIcon={<DownloadIcon />}
+                                    download="Josue Rodriguez Resume.pdf"
+                                >
+                                    {name}
+                                </Button>
+                            ) : (
+                                <Button
+                                    key={i}
+                                    onClick={() => {
+                                        scrollToSection(link)
+                                    }}
+                                    sx={{
+                                        m: '0.2rem',
+                                        textTransform: 'capitalize',
+                                    }}
+                                >
+                                    {name}
+                                </Button>
+                            )
+                        )}
+                    </Box>
 
-                        {/* Desktop tabs */}
-                        <Box
-                            sx={{
-                                display: { xs: 'none', md: 'block' },
-                            }}
-                        >
-                            {tabs.map(({ name, link }, i, arr) =>
-                                i === arr.length - 1 ? (
-                                    <Button
-                                        variant="contained"
-                                        key={i}
-                                        href={link}
-                                        sx={{
-                                            m: '0.2rem',
-                                            textTransform: 'capitalize',
-                                            color: '#E6E5E8',
-                                            bgcolor: 'secordary.main',
-                                        }}
-                                        startIcon={<DownloadIcon />}
-                                        download="Josue Rodriguez Resume.pdf"
-                                    >
-                                        {name}
-                                    </Button>
-                                ) : (
-                                    <Button
-                                        key={i}
-                                        onClick={() => {
-                                            scrollToSection(link)
-                                        }}
-                                        sx={{
-                                            m: '0.2rem',
-                                            textTransform: 'capitalize',
-                                        }}
-                                    >
-                                        {name}
-                                    </Button>
-                                )
-                            )}
-                        </Box>
-
-                        {/* Mobile tabs */}
-                        <Box sx={{ display: { md: 'none' } }}>
-                            <Menu
-                                setIsMenuOpen={setIsMenuOpen}
-                                isMenuOpen={isMenuOpen}
-                                scrollToSection={scrollToSection}
-                            />
-                        </Box>
+                    {/* Mobile tabs */}
+                    <Box sx={{ display: { md: 'none' } }}>
+                        <Menu
+                            setIsMenuOpen={setIsMenuOpen}
+                            isMenuOpen={isMenuOpen}
+                            scrollToSection={scrollToSection}
+                        />
                     </Box>
                 </Box>
-            </nav>
+            </Box>
         </HideOnScroll>
     )
 }
