@@ -18,33 +18,15 @@ import {
     TableHead,
 } from '@mui/material'
 
-interface Language {
-    language: string
-    level: string
-}
-
-interface Certification {
-    issuer: string
+interface Achievements {
     title: string
-    link: string
-    year: string
+    columns: string[]
+    rows: any[]
 }
 
-interface Achievement {
-    title: string
-    link: string
-    year: string
-}
-
-interface Accompishments {
-    title: string
-    categories: string[]
-    data: any[]
-}
-
-const Dropdown = (accomplishment: Accompishments) => {
+const Dropdown = (achievement: Achievements) => {
     const [open, setOpen] = useState(false)
-    const { title, categories, data } = accomplishment
+    const { title, columns, rows } = achievement
 
     return (
         <Box>
@@ -69,13 +51,13 @@ const Dropdown = (accomplishment: Accompishments) => {
                                 marginRight: '1rem',
                             }}
                         >
-                            {data.length}{' '}
+                            {rows.length}{' '}
                         </Box>
                         {title}
                     </Typography>
                 </Box>
 
-                {data.length && (
+                {rows.length && (
                     <Box>
                         {open ? (
                             <IconButton
@@ -101,18 +83,18 @@ const Dropdown = (accomplishment: Accompishments) => {
                     <Table size="small">
                         <TableHead>
                             <TableRow>
-                                {categories.map((category, i) => (
+                                {columns.map((columnName, i) => (
                                     <TableCell
                                         key={i}
                                         sx={{ textTransform: 'capitalize' }}
                                     >
-                                        {category}
+                                        {columnName}
                                     </TableCell>
                                 ))}
                             </TableRow>
                         </TableHead>
                         <TableBody>
-                            {data.map((achievement, i) => (
+                            {rows.map((achievement, i) => (
                                 <TableRow
                                     key={i}
                                     sx={{
@@ -121,16 +103,16 @@ const Dropdown = (accomplishment: Accompishments) => {
                                         },
                                     }}
                                 >
-                                    {categories.map((category, j) => (
+                                    {columns.map((columnName, j) => (
                                         <TableCell key={j}>
                                             {(() => {
-                                                if (category === 'link') {
+                                                if (columnName === 'link') {
                                                     return (
                                                         <IconButton
                                                             size="small"
                                                             href={
                                                                 achievement[
-                                                                    category
+                                                                    columnName
                                                                 ]
                                                             }
                                                             target="_blank"
@@ -138,12 +120,12 @@ const Dropdown = (accomplishment: Accompishments) => {
                                                             aria-label="Open in new tab"
                                                             disabled={
                                                                 !achievement[
-                                                                    category
+                                                                    columnName
                                                                 ]
                                                             }
                                                         >
                                                             {achievement[
-                                                                category
+                                                                columnName
                                                             ] ? (
                                                                 <OpenInNewIcon fontSize="small" />
                                                             ) : (
@@ -152,7 +134,7 @@ const Dropdown = (accomplishment: Accompishments) => {
                                                         </IconButton>
                                                     )
                                                 }
-                                                return achievement[category]
+                                                return achievement[columnName]
                                             })()}
                                         </TableCell>
                                     ))}

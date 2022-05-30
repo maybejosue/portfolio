@@ -1,6 +1,6 @@
 import { Box, Button, Drawer, IconButton } from '@mui/material'
 import { Menu as MenuIcon, Download as DownloadIcon } from '@mui/icons-material'
-import { tabs } from 'content'
+import { tabs } from './tabs'
 
 type Props = {
     setIsMenuOpen: (isMenuOpen: boolean) => void

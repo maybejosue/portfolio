@@ -1,7 +1,7 @@
 const languages = {
     title: 'languages',
-    categories: ['language', 'level'],
-    data: [
+    columns: ['language', 'level'],
+    rows: [
         {
             language: 'English',
             level: 'Advanced',
@@ -15,8 +15,8 @@ const languages = {
 
 const certifications = {
     title: 'certifications',
-    categories: ['issuer', 'year', 'title', 'link'],
-    data: [
+    columns: ['issuer', 'year', 'title', 'link'],
+    rows: [
         {
             issuer: 'HackerRank',
             title: 'CSS',
@@ -62,4 +62,4 @@ const certifications = {
     ],
 }
 
-export const accomplishments = [languages, certifications]
+export const achievements = [languages, certifications]

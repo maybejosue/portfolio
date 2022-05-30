@@ -1,9 +1,10 @@
 import Slider from 'react-slick'
 import { Box } from '@mui/material'
-import { projects } from 'content'
+import { projects } from 'data'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import ProjectCard from './ProjectCard'
+import { Section } from 'components/utils'
 
 const NextArrow = (props: any) => {
     const { className, style, onClick } = props
@@ -50,7 +51,7 @@ const Projects = () => {
     }
 
     return (
-        <section id="projects">
+        <Section name="projects">
             <Box
                 sx={{
                     marginBottom: '3rem',
@@ -62,7 +63,7 @@ const Projects = () => {
                     ))}
                 </Slider>
             </Box>
-        </section>
+        </Section>
     )
 }
 

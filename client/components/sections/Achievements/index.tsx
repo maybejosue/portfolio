@@ -1,25 +1,25 @@
 import { Section, Widget } from 'components/utils'
 import Dropdown from './Dropdown'
 import { Typography } from '@mui/material'
-import { accomplishments } from 'content'
+import { achievements } from 'data'
 
-const Accomplishments = () => {
+const Achievements = () => {
     return (
-        <Section name="accomplishments">
+        <Section name="achievements">
             <Widget>
                 <Typography
                     sx={{
                         mb: '1rem',
                     }}
                 >
-                    Accomplishments
+                    Achievements
                 </Typography>
-                {accomplishments.map((accomplishment, i) => (
-                    <Dropdown {...accomplishment} key={i} />
+                {achievements.map((achievement, i) => (
+                    <Dropdown {...achievement} key={i} />
                 ))}
             </Widget>
         </Section>
     )
 }
 
-export default Accomplishments
+export default Achievements

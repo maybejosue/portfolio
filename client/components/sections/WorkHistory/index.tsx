@@ -9,7 +9,7 @@ import {
     useMediaQuery,
 } from '@mui/material'
 import TabPanel from './TabPanel'
-import { jobSearchStatus, workHistory } from 'content'
+import { jobSearchStatus, workHistory } from 'data'
 
 const WorkHistory = () => {
     const [value, setValue] = useState(0)
@@ -17,7 +17,7 @@ const WorkHistory = () => {
     const matches = useMediaQuery(theme.breakpoints.down('md'))
 
     return (
-        <Section name="experience">
+        <Section name="workHistory">
             <Widget>
                 <Typography paragraph>Work History</Typography>
                 {jobSearchStatus && (

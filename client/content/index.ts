@@ -1,7 +1,0 @@
-export { tabs } from './tabs'
-export { greeting } from './greeting'
-export { userDetails } from './userDetails'
-export { workHistory } from './workHistory'
-export { jobSearchStatus } from './jobSearchStatus'
-export { projects } from './projects'
-export { accomplishments } from './accomplishments'
