@@ -51,6 +51,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                     }}
                 >
                     <Navbar />
+
                     <Box
                         sx={{
                             m: '0 auto',

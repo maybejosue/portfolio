@@ -1,12 +1,13 @@
 import { Box, Typography, Button } from '@mui/material'
 import { greeting } from 'content'
 import ParkIcon from '@mui/icons-material/Park'
+import { Section } from 'components/utils'
 
-const Greeting = () => {
+const Banner = () => {
     const { headline, name, status, oneliner, link } = greeting
 
     return (
-        <section id="greeting">
+        <Section name="greeting">
             <Box sx={{ p: '9rem 1rem ' }}>
                 <Typography color="primary" gutterBottom variant="subtitle1">
                     {headline}
@@ -49,8 +50,8 @@ const Greeting = () => {
                     LinkTree
                 </Button>
             </Box>
-        </section>
+        </Section>
     )
 }
 
-export default Greeting
+export default Banner

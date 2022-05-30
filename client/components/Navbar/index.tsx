@@ -1,9 +1,17 @@
 import { useState } from 'react'
 import { Box, Button, useMediaQuery, useTheme } from '@mui/material'
-import { Logo, Menu } from 'components'
+import Logo from './Logo'
+import Menu from './Menu'
 import { HideOnScroll } from 'components/utils'
 import { scroller } from 'react-scroll'
-import { tabs } from 'content'
+
+export const tabs = [
+    { name: 'About', link: 'about' },
+    { name: 'Experience', link: 'experience' },
+    { name: 'Projects', link: 'projects' },
+    { name: 'Accomplishments', link: 'accomplishments' },
+    { name: 'Resume', link: 'resume' },
+]
 
 const Navbar = () => {
     const theme = useTheme()
@@ -24,15 +32,15 @@ const Navbar = () => {
 
     return (
         <HideOnScroll>
-            <nav>
-                <Box
-                    sx={{
-                        zIndex: 'appBar',
-                        width: '100%',
-                        position: 'fixed',
-                        backgroundColor: 'background.paper',
-                    }}
-                >
+            <Box
+                sx={{
+                    zIndex: 'appBar',
+                    width: '100%',
+                    position: 'fixed',
+                    backgroundColor: 'background.paper',
+                }}
+            >
+                <nav>
                     <Box
                         sx={{
                             p: '0.75rem',
@@ -59,7 +67,6 @@ const Navbar = () => {
                                             color: '#E6E5E8',
                                             bgcolor: 'secordary.main',
                                         }}
-                                        download="Josue Rodriguez Resume.pdf"
                                     >
                                         {name}
                                     </Button>
@@ -67,7 +74,7 @@ const Navbar = () => {
                                     <Button
                                         key={i}
                                         onClick={() => {
-                                            scrollToSection(link)
+                                            // scrollToSection(link)
                                         }}
                                         sx={{
                                             m: '0.2rem',
@@ -89,8 +96,8 @@ const Navbar = () => {
                             />
                         </Box>
                     </Box>
-                </Box>
-            </nav>
+                </nav>
+            </Box>
         </HideOnScroll>
     )
 }

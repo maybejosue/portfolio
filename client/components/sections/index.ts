@@ -1,0 +1,5 @@
+export { default as Banner } from './Banner'
+export { default as AboutMe } from './AboutMe'
+export { default as WorkHistory } from './WorkHistory'
+export { default as Projects } from './Projects'
+export { default as Accomplishments } from './Accomplishments'
