@@ -57,7 +57,6 @@ const Navbar = () => {
                 sx={{
                     m: '0.2rem',
                     textTransform: 'capitalize',
-                    color: '#E6E5E8',
                     bgcolor: 'secordary.main',
                 }}
                 startIcon={<DownloadIcon />}
@@ -88,18 +87,16 @@ const Navbar = () => {
                     backgroundColor: 'background.paper',
                 }}
             >
-                <nav>
-                    <Box
-                        sx={{
-                            p: '0.75rem',
-                            display: 'flex',
-                        }}
-                    >
-                        <Logo />
+                <Box
+                    sx={{
+                        p: '0.75rem',
+                        display: 'flex',
+                    }}
+                >
+                    <Logo />
 
-                        {isDesktop ? desktopMenu : mobileMenu}
-                    </Box>
-                </nav>
+                    {isDesktop ? desktopMenu : mobileMenu}
+                </Box>
             </Box>
         </HideOnScroll>
     )

@@ -2,8 +2,8 @@ import { Box, Button, Drawer, IconButton } from '@mui/material'
 import { Menu as MenuIcon, Download as DownloadIcon } from '@mui/icons-material'
 
 type Props = {
-    setIsMenuOpen: (isMenuOpen: boolean) => void
     isMenuOpen: boolean
+    setIsMenuOpen: (isMenuOpen: boolean) => void
     scrollToSection: (section: string) => void
     tabs: Array<{ name: string; link: string }>
 }

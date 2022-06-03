@@ -1,14 +1,12 @@
 import { useState } from 'react'
-import { Collapse, Alert } from '@mui/material'
+import { Collapse, Alert, AlertColor } from '@mui/material'
 import { Update as UpdateIcon } from '@mui/icons-material'
-
-type MuiSeverityAndColor = 'info' | 'warning' | 'error' | 'success'
 
 interface AlertProps {
     message: string
     icon?: React.ReactElement
-    severity?: MuiSeverityAndColor
-    color?: MuiSeverityAndColor
+    severity?: AlertColor
+    color?: AlertColor
 }
 
 const UpdateMessage = ({ message, color, icon, severity }: AlertProps) => {
