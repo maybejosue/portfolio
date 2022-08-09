@@ -55,7 +55,11 @@ const mintmobile: Job = {
                 city: '',
                 state: '',
             },
-            contributions: [],
+            contributions: [
+                'Developed an internal tool that allows Ultra and its brands to manage and release products',
+                'Presents technical concepts to the organization to improve company knowledge and awareness',
+                'Coordinates across teams to remove technical debt and migrate monolithic code into micro-service architecture',
+            ],
         },
     ],
 }
