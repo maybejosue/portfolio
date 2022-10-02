@@ -40,9 +40,9 @@ const mintmobile: Job = {
     },
     positions: [
         {
-            title: 'Software Engineer Intern',
+            title: 'Software Engineer',
             startDate: {
-                month: 'apr',
+                month: 'sep',
                 year: 2022,
             },
             endDate: {
@@ -56,9 +56,30 @@ const mintmobile: Job = {
                 state: '',
             },
             contributions: [
-                'Developed an internal tool that allows Ultra and its brands to manage and release products',
+                'Applies E2E testing for several critical user paths like activation and log-in using Cypress framework',
+                'Builds Postman mock server endpoints to ensure predictable API responses for edge case scenarios',
                 'Presents technical concepts to the organization to improve company knowledge and awareness',
-                'Coordinates across teams to remove technical debt and migrate monolithic code into micro-service architecture',
+            ],
+        },
+        {
+            title: 'Software Engineer Intern',
+            startDate: {
+                month: 'apr',
+                year: 2022,
+            },
+            endDate: {
+                isPresent: false,
+                month: 'sept',
+                year: 2022,
+            },
+            location: {
+                isRemote: true,
+                city: '',
+                state: '',
+            },
+            contributions: [
+                'Developed an internal tool that allows Ultra and its brands to manage and release products more efficiently',
+                'Coordinated across teams to remove technical debt and migrate monolithic code into micro-service architecture',
             ],
         },
     ],
@@ -90,7 +111,7 @@ const bloomtech: Job = {
             },
             contributions: [
                 'provided weekly actionable feedback and code reviews to 700+ student developers on full-stack technologies',
-                'assisted Lead Instructors by recommending which concepts to review',
+                "Assisted Lead Instructors by recommending which concepts to review based on the students' performance",
                 'trained incoming Code Reviewers on the company’s guidelines and workflow for code reviews',
             ],
         },
