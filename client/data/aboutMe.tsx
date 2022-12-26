@@ -2,7 +2,7 @@ import EmailIcon from '@mui/icons-material/Email'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import StarIcon from '@mui/icons-material/Star'
-import img from 'assets/josue.webp'
+import img from 'assets/josue.png'
 
 const contact = {
     icon: <EmailIcon />,

@@ -7,8 +7,8 @@ import {
     TimelineDot,
 } from '@mui/lab'
 import { Typography, Box, Avatar, IconButton } from '@mui/material'
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'
+import ArrowRightSharpIcon from '@mui/icons-material/ArrowRightSharp'
 import { Job } from 'interfaces/commonTypes.interface'
 import Image from 'next/image'
 
@@ -116,10 +116,15 @@ const TabPanel = ({ company, positions }: Job) => {
                                             color: 'text.secondary',
                                         }}
                                     >
-                                        {startMonth} {startYear} -{' '}
+                                        {capitalizeFirstLetterOfEachWord(
+                                            startMonth
+                                        )}{' '}
+                                        {startYear} -{' '}
                                         {isPresent
                                             ? 'Present'
-                                            : `${endMonth} ${endYear}`}{' '}
+                                            : `${capitalizeFirstLetterOfEachWord(
+                                                  endMonth
+                                              )} ${endYear}`}{' '}
                                         •{' '}
                                         {isRemote
                                             ? 'Remote'
@@ -140,10 +145,7 @@ const TabPanel = ({ company, positions }: Job) => {
                                                 mb: '0.5rem',
                                             }}
                                         >
-                                            <ArrowForwardIosIcon
-                                                fontSize="small"
-                                                color="secondary"
-                                            />
+                                            <ArrowRightSharpIcon color="secondary" />
                                             <Typography>
                                                 {' '}
                                                 {contribution}
