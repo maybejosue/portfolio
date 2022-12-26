@@ -42,7 +42,7 @@ const mintmobile: Job = {
         {
             title: 'Software Engineer',
             startDate: {
-                month: 'sep',
+                month: 'jul',
                 year: 2022,
             },
             endDate: {
@@ -55,11 +55,7 @@ const mintmobile: Job = {
                 city: '',
                 state: '',
             },
-            contributions: [
-                'Applies E2E testing for several critical user paths like activation and log-in using Cypress framework',
-                'Builds Postman mock server endpoints to ensure predictable API responses for edge case scenarios',
-                'Presents technical concepts to the organization to improve company knowledge and awareness',
-            ],
+            contributions: [],
         },
         {
             title: 'Software Engineer Intern',
@@ -69,7 +65,7 @@ const mintmobile: Job = {
             },
             endDate: {
                 isPresent: false,
-                month: 'sept',
+                month: 'jun',
                 year: 2022,
             },
             location: {
@@ -79,7 +75,8 @@ const mintmobile: Job = {
             },
             contributions: [
                 'Developed an internal tool that allows Ultra and its brands to manage and release products more efficiently',
-                'Coordinated across teams to remove technical debt and migrate monolithic code into micro-service architecture',
+                'Applies E2E testing for several critical user paths like activation and log-in using Cypress framework',
+                'Builds Postman mock server endpoints to ensure predictable API responses for edge case scenarios',
             ],
         },
     ],
