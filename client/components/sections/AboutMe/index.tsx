@@ -66,12 +66,8 @@ const AboutMe = () => {
                 </Box>
                 <Box>
                     <Typography paragraph>
-                        Hey, I'm Josue Rodriguez, a software engineer based in
-                        Hemet, CA.
-                    </Typography>
-                    <Typography paragraph>
                         My professional career started when I dropped out of
-                        college to attend{' '}
+                        College to attend{' '}
                         <Link
                             href={'https://www.bloomtech.com/'}
                             color="secondary"
@@ -84,23 +80,33 @@ const AboutMe = () => {
                             </Box>
                             )
                         </Link>
-                        ; a technical training program designed to teach
+                        , a technical training program designed to teach
                         full-stack web development and computer science
                         fundamentals.
                     </Typography>
                     <Typography paragraph>
-                        After I graduated from Bloomtech, I worked as a Code
-                        Reviewer, where I provided actionable feedback to
-                        student developers on their sprint challenge
-                        submissions. While I enjoyed my time as a Code Reviewer,
-                        I left the position to focus on finding a full-time
-                        Software Engineering role whose products and projects
-                        I'm passionate about.
+                        You’ll often hear me say I’m in the Tech Industry by
+                        accident because I discovered programming through an Ad
+                        on Instagram. The boot camp sounded like a great
+                        opportunity, and I ultimately decided to drop out of
+                        College to attend the boot camp instead.
                     </Typography>
                     <Typography paragraph>
-                        On a more personal note, I enjoy watching anime, reading
-                        manga, struggling through Leetcode challenges, and
-                        immersing myself in the sneaker-twitter community.
+                        During the 9-18 months there, I fell in love with
+                        solving problems using code, the dev community and
+                        having big-brain mentors. After graduation, I worked for
+                        the School as a Code Reviewer, where I was tasked with
+                        providing actionable feedback to student developers on
+                        their sprint challenge submissions. I later left that
+                        position to focus on finding a full-time Software
+                        Engineering role with more growth opportunities.
+                    </Typography>
+                    <Typography paragraph>
+                        On a more personal note, I find interest in fashion even
+                        though I don't consider myself particularly fashionable.
+                        I also enjoy watching anime, reading manga, struggling
+                        through Leetcode challenges, and immersing myself in the
+                        sneaker-twitter community.
                     </Typography>
                 </Box>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
