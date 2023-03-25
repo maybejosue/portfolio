@@ -80,33 +80,22 @@ const AboutMe = () => {
                             </Box>
                             )
                         </Link>
-                        , a technical training program designed to teach
-                        full-stack web development and computer science
-                        fundamentals.
+                        , a technical training program designed for full-stack
+                        web development and computer science fundamentals.
                     </Typography>
                     <Typography paragraph>
-                        You’ll often hear me say I’m in the Tech Industry by
-                        accident because I discovered programming through an Ad
-                        on Instagram. The boot camp sounded like a great
-                        opportunity, and I ultimately decided to drop out of
-                        College to attend the boot camp instead.
+                        Following my graduation, I landed an internship at Mint
+                        Mobile, which later converted into a Software
+                        Engineering Level 1 position. Currently, I am part of
+                        the Core Infrastructure team, where my colleagues and I
+                        undertake the development and maintenance of internal
+                        tools and operations.
                     </Typography>
                     <Typography paragraph>
-                        During the 9-18 months there, I fell in love with
-                        solving problems using code, the dev community and
-                        having big-brain mentors. After graduation, I worked for
-                        the School as a Code Reviewer, where I was tasked with
-                        providing actionable feedback to student developers on
-                        their sprint challenge submissions. I later left that
-                        position to focus on finding a full-time Software
-                        Engineering role with more growth opportunities.
-                    </Typography>
-                    <Typography paragraph>
-                        On a more personal note, I find interest in fashion even
-                        though I don't consider myself particularly fashionable.
-                        I also enjoy watching anime, reading manga, struggling
-                        through Leetcode challenges, and immersing myself in the
-                        sneaker-twitter community.
+                        On a more personal note, I love getting absolutely
+                        decimated in the stock market and binging on anime and
+                        crime documentaries. I'm also looking forward to my real
+                        estate ventures!
                     </Typography>
                 </Box>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
