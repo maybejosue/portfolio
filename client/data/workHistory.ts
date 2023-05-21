@@ -56,7 +56,6 @@ const mintmobile: Job = {
                 state: '',
             },
             contributions: [
-                'Member of Core Infrastructure team responsible for developing and maintaining internal tools and operations',
                 'Improved our internal deployment system, which prevented errors from reaching our cash-flowing operations before they deployed to production',
                 'Introduced internal tool that promoted collaboration amongst teams and automated typical workflows like SIM card generation, activating SIM, retrieving authentication info, etc...',
                 'Coordinated across teams to remove technical debt and migrate monolithic code into micro-service architecture',
