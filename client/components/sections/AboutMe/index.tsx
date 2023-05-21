@@ -1,13 +1,5 @@
 import { Section, Widget } from 'components/utils'
-import {
-    Box,
-    Paper,
-    Button,
-    Typography,
-    Avatar,
-    Chip,
-    Link,
-} from '@mui/material'
+import { Box, Paper, Typography, Avatar, Chip } from '@mui/material'
 import { LocationOn as LocationOnIcon } from '@mui/icons-material'
 import { aboutMe } from 'data'
 
@@ -17,7 +9,6 @@ const AboutMe = () => {
         profession,
         location: { city, state },
         avatar: { src },
-        contact: { icon, link, headline, label },
     } = aboutMe
 
     return (
@@ -96,24 +87,6 @@ const AboutMe = () => {
                             gridColumnGap: '1rem',
                         }}
                     ></Box>
-
-                    <Button
-                        variant="contained"
-                        target="_black"
-                        href={link}
-                        aria-label={label}
-                        startIcon={icon}
-                        rel="noopener noreferrer"
-                        sx={{
-                            minWidth: '0',
-                            padding: '0.5rem',
-                            background: 'palette.grey[100]',
-                            color: 'palette.grey[800]',
-                            textTransform: 'capitalize',
-                        }}
-                    >
-                        {headline}
-                    </Button>
                 </Box>
             </Widget>
         </Section>
