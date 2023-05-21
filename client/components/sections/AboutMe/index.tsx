@@ -16,7 +16,6 @@ const AboutMe = () => {
         name,
         profession,
         location: { city, state },
-        socials,
         avatar: { src },
         contact: { icon, link, headline, label },
     } = aboutMe
@@ -67,29 +66,20 @@ const AboutMe = () => {
                 <Box>
                     <Typography paragraph>
                         My professional career started when I dropped out of
-                        College to attend{' '}
-                        <Link
-                            href={'https://www.bloomtech.com/'}
-                            color="secondary"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Bloomtech (
-                            <Box component="span" fontStyle="italic">
-                                formerly Lambda School
-                            </Box>
-                            )
-                        </Link>
-                        , a technical training program designed for full-stack
+                        College to attend Bloomtech (
+                        <Box component="span" fontStyle="italic">
+                            formerly Lambda School
+                        </Box>
+                        ), a technical training program designed for full-stack
                         web development and computer science fundamentals.
                     </Typography>
                     <Typography paragraph>
                         Following my graduation, I landed an internship at Mint
-                        Mobile, which later converted into a Software
-                        Engineering Level 1 position. Currently, I am part of
-                        the Core Infrastructure team, where my colleagues and I
-                        undertake the development and maintenance of internal
-                        tools and operations.
+                        Mobile, which later converted into a permanent Software
+                        Engineering position. Currently, I am part of the Core
+                        Infrastructure team, where my colleagues and I undertake
+                        the development and maintenance of internal tools and
+                        operations.
                     </Typography>
                     <Typography paragraph>
                         On a more personal note, I love getting absolutely
@@ -105,27 +95,7 @@ const AboutMe = () => {
                             gridAutoFlow: 'column',
                             gridColumnGap: '1rem',
                         }}
-                    >
-                        {socials.map(({ icon, link, label }, i) => (
-                            <Button
-                                variant="contained"
-                                key={i}
-                                target="_black"
-                                href={link}
-                                aria-label={label}
-                                rel="noopener noreferrer"
-                                sx={{
-                                    minWidth: '0',
-                                    padding: '0.5rem',
-                                    background: 'palette.grey[100]',
-                                    color: 'palette.grey[800]',
-                                    textTransform: 'capitalize',
-                                }}
-                            >
-                                {icon}
-                            </Button>
-                        ))}
-                    </Box>
+                    ></Box>
 
                     <Button
                         variant="contained"
